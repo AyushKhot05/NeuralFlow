@@ -1,0 +1,4624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ═══════════════════════════════════════════════════════════
+       META & SEO
+  ═══════════════════════════════════════════════════════════ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="NeuralFlow — The next-generation AI-driven data automation platform. Automate workflows, predict outcomes, and scale intelligently with enterprise-grade AI." />
+  <meta name="keywords" content="AI platform, data automation, machine learning, workflow automation, NeuralFlow" />
+  <meta name="author" content="NeuralFlow Inc." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#172B36" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="NeuralFlow — Next-Gen AI Data Automation Platform" />
+  <meta property="og:description"
+    content="Automate workflows, predict outcomes, and scale intelligently with enterprise-grade AI. Built for speed, engineered for scale." />
+  <meta property="og:url" content="https://neuralflow.ai" />
+  <meta property="og:image" content="https://neuralflow.ai/og-image.png" />
+  <meta property="og:site_name" content="NeuralFlow" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NeuralFlow — Next-Gen AI Data Automation Platform" />
+  <meta name="twitter:description"
+    content="Automate workflows, predict outcomes, and scale intelligently with enterprise-grade AI." />
+  <meta name="twitter:image" content="https://neuralflow.ai/og-image.png" />
+
+  <title>NeuralFlow — Next-Gen AI Data Automation Platform</title>
+  <link rel="canonical" href="https://neuralflow.ai" />
+
+  <!-- ═══════════════════════════════════════════════════════════
+       PERFORMANCE OPTIMIZATION & PRELOADS
+  ═══════════════════════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SCHEMA.ORG JSON-LD (SEO 30-Point Boost)
+  ═══════════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://neuralflow.ai/#organization",
+        "name": "NeuralFlow",
+        "url": "https://neuralflow.ai",
+        "logo": "https://neuralflow.ai/logo.png",
+        "sameAs": [
+          "https://twitter.com/neuralflow",
+          "https://github.com/neuralflow"
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://neuralflow.ai/#software",
+        "name": "NeuralFlow Platform",
+        "url": "https://neuralflow.ai",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "All",
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "59",
+          "highPrice": "479",
+          "offerCount": "3"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://neuralflow.ai/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is NeuralFlow?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "NeuralFlow is a next-generation AI-driven data automation platform that orchestrates machine learning pipelines, handles multi-cloud data fabric operations, and guarantees sub-40ms inference latency."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the pricing regional currency adjustment work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pricing is computed dynamically based on a regional tariff and billing cycle, supporting INR, USD, and EUR. State updates are strictly isolated to localized DOM nodes for performance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What security compliance standards does NeuralFlow meet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "NeuralFlow complies with SOC 2 Type II, GDPR, HIPAA, and CCPA standards, featuring end-to-end AES-256 encryption both at rest and in transit."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       DESIGN SYSTEM & CSS
+  ═══════════════════════════════════════════════════════════ -->
+  <style>
+    /* ── DESIGN TOKENS ── */
+    :root {
+      /* Color Palette — from colorPallet.pdf */
+      --forsythia: #FFC801;
+      --nocturnal: #114C5A;
+      --arctic: #F1F6F4;
+      --mystic-mint: #D9E8E2;
+      --saffron: #FF9932;
+      --oceanic: #172B36;
+
+      /* Derived tokens */
+      --bg-primary: var(--oceanic);
+      --bg-secondary: var(--nocturnal);
+      --bg-surface: #1e3545;
+      --bg-card: #1a3040;
+      --accent-1: var(--forsythia);
+      --accent-2: var(--saffron);
+      --text-primary: var(--arctic);
+      --text-muted: var(--mystic-mint);
+      --text-dark: var(--oceanic);
+      --border: rgba(255, 200, 1, 0.15);
+      --border-light: rgba(241, 246, 244, 0.1);
+
+      /* Typography — from fonts.pdf */
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-body: 'Inter', sans-serif;
+
+      /* Spacing */
+      --sp-xs: 0.25rem;
+      --sp-sm: 0.5rem;
+      --sp-md: 1rem;
+      --sp-lg: 1.5rem;
+      --sp-xl: 2rem;
+      --sp-2xl: 3rem;
+      --sp-3xl: 4rem;
+      --sp-4xl: 6rem;
+
+      /* Motion — per spec */
+      --ease-out: cubic-bezier(0.0, 0.0, 0.2, 1);
+      --ease-in-out: cubic-bezier(0.4, 0.0, 0.2, 1);
+      --dur-micro: 175ms;
+      /* 150–200ms range */
+      --dur-layout: 350ms;
+      /* 300–400ms range */
+
+      /* Radii */
+      --r-sm: 6px;
+      --r-md: 12px;
+      --r-lg: 18px;
+      --r-xl: 24px;
+      --r-full: 9999px;
+
+      /* Shadows */
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
+      --shadow-glow-yellow: 0 0 24px rgba(255, 200, 1, 0.25);
+      --shadow-glow-teal: 0 0 24px rgba(17, 76, 90, 0.5);
+    }
+
+    /* ── RESET ── */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--oceanic);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img,
+    svg {
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-family: inherit;
+    }
+
+    ul,
+    ol {
+      list-style: none;
+    }
+
+    /* ── LOADER ── */
+    #loader {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: var(--oceanic);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: var(--sp-md);
+      transition: opacity 200ms var(--ease-out), visibility 200ms;
+    }
+
+    #loader.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .loader-ring {
+      width: 48px;
+      height: 48px;
+      border: 3px solid var(--border);
+      border-top-color: var(--forsythia);
+      border-radius: 50%;
+      animation: spin 600ms linear infinite;
+    }
+
+    .loader-text {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--forsythia);
+      letter-spacing: 0.15em;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* ── LAYOUT UTILITIES ── */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--sp-xl);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* ── ENTRY ANIMATIONS ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity var(--dur-layout) var(--ease-out),
+        transform var(--dur-layout) var(--ease-out);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ════════════════════════════════════════════
+       HEADER / NAV
+    ════════════════════════════════════════════ */
+    #site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: var(--sp-md) 0;
+      background: rgba(23, 43, 54, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-light);
+      transition: background var(--dur-micro) var(--ease-out),
+        box-shadow var(--dur-micro) var(--ease-out);
+    }
+
+    #site-header.scrolled {
+      background: rgba(23, 43, 54, 0.97);
+      box-shadow: var(--shadow-md);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--sp-xl);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-sm);
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--text-primary);
+      transition: color var(--dur-micro) var(--ease-out);
+    }
+
+    .nav-logo:hover {
+      color: var(--forsythia);
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, var(--forsythia), var(--saffron));
+      border-radius: var(--r-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .logo-icon svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .logo-icon svg path {
+      stroke: var(--oceanic);
+      fill: none;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-xl);
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color var(--dur-micro) var(--ease-out);
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--forsythia);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--dur-micro) var(--ease-out);
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-md);
+    }
+
+    .btn-ghost {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-xs);
+      padding: 0.5rem 0.75rem;
+      border-radius: var(--r-sm);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color var(--dur-micro) var(--ease-out),
+        background var(--dur-micro) var(--ease-out);
+    }
+
+    .btn-ghost:hover {
+      color: var(--text-primary);
+      background: var(--border-light);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-xs);
+      padding: 0.6rem 1.25rem;
+      background: var(--forsythia);
+      color: var(--oceanic);
+      font-weight: 700;
+      font-size: 0.875rem;
+      border-radius: var(--r-sm);
+      transition: background var(--dur-micro) var(--ease-out),
+        transform var(--dur-micro) var(--ease-out),
+        box-shadow var(--dur-micro) var(--ease-out);
+    }
+
+    .btn-primary:hover {
+      background: #ffd133;
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-glow-yellow);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-xs);
+      padding: 0.6rem 1.25rem;
+      background: transparent;
+      color: var(--text-primary);
+      font-weight: 600;
+      font-size: 0.875rem;
+      border-radius: var(--r-sm);
+      border: 1px solid var(--border);
+      transition: border-color var(--dur-micro) var(--ease-out),
+        background var(--dur-micro) var(--ease-out),
+        transform var(--dur-micro) var(--ease-out);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--forsythia);
+      background: rgba(255, 200, 1, 0.06);
+      transform: translateY(-1px);
+    }
+
+    .nav-mobile-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: var(--r-sm);
+      color: var(--text-muted);
+      transition: color var(--dur-micro), background var(--dur-micro);
+    }
+
+    .nav-mobile-toggle:hover {
+      color: var(--text-primary);
+      background: var(--border-light);
+    }
+
+    /* Mobile nav */
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      inset: 0;
+      top: 65px;
+      z-index: 99;
+      background: rgba(23, 43, 54, 0.98);
+      backdrop-filter: blur(20px);
+      padding: var(--sp-xl);
+      flex-direction: column;
+      gap: var(--sp-lg);
+      transform: translateY(-100%);
+      transition: transform var(--dur-layout) var(--ease-in-out);
+    }
+
+    .nav-mobile.open {
+      display: flex;
+      transform: translateY(0);
+    }
+
+    .nav-mobile a {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      padding: var(--sp-md) 0;
+      border-bottom: 1px solid var(--border-light);
+      transition: color var(--dur-micro);
+    }
+
+    .nav-mobile a:hover {
+      color: var(--forsythia);
+    }
+
+    /* ════════════════════════════════════════════
+       HERO SECTION
+    ════════════════════════════════════════════ */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: var(--sp-4xl) 0 var(--sp-3xl);
+    }
+
+    /* Animated gradient background */
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(17, 76, 90, 0.8) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 50% at 80% 50%, rgba(255, 200, 1, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 10% 90%, rgba(255, 153, 50, 0.06) 0%, transparent 60%),
+        var(--oceanic);
+    }
+
+    /* Grid pattern overlay */
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background-image:
+        linear-gradient(rgba(241, 246, 244, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(241, 246, 244, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    /* Floating orbs */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      animation: float 8s ease-in-out infinite;
+    }
+
+    .orb-1 {
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255, 200, 1, 0.12), transparent 70%);
+      top: 10%;
+      right: -10%;
+      animation-delay: 0s;
+    }
+
+    .orb-2 {
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(255, 153, 50, 0.1), transparent 70%);
+      bottom: 15%;
+      left: -5%;
+      animation-delay: -3s;
+    }
+
+    .orb-3 {
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(17, 76, 90, 0.4), transparent 70%);
+      top: 50%;
+      left: 40%;
+      animation-delay: -5s;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0) scale(1);
+      }
+
+      50% {
+        transform: translateY(-20px) scale(1.05);
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-sm);
+      padding: 0.4rem 1rem;
+      background: rgba(255, 200, 1, 0.1);
+      border: 1px solid rgba(255, 200, 1, 0.3);
+      border-radius: var(--r-full);
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--forsythia);
+      letter-spacing: 0.1em;
+      margin-bottom: var(--sp-xl);
+    }
+
+    .hero-badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--forsythia);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(0.8);
+      }
+    }
+
+    .hero-headline {
+      font-family: var(--font-mono);
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      margin-bottom: var(--sp-xl);
+    }
+
+    .hero-headline .accent {
+      color: var(--forsythia);
+    }
+
+    .hero-headline .accent-saffron {
+      color: var(--saffron);
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-weight: 400;
+      color: var(--text-muted);
+      max-width: 560px;
+      margin-bottom: var(--sp-2xl);
+      line-height: 1.7;
+    }
+
+    .hero-cta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--sp-md);
+      margin-bottom: var(--sp-3xl);
+    }
+
+    .btn-hero {
+      padding: 0.875rem 2rem;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: var(--r-md);
+    }
+
+    .hero-stats {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--sp-xl);
+      padding-top: var(--sp-xl);
+      border-top: 1px solid var(--border-light);
+    }
+
+    .hero-stat-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .hero-stat-value {
+      font-family: var(--font-mono);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--forsythia);
+    }
+
+    .hero-stat-label {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .hero-stat-sep {
+      width: 1px;
+      height: 40px;
+      background: var(--border-light);
+    }
+
+    /* Hero visual */
+    .hero-visual {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-card {
+      background: linear-gradient(135deg, rgba(30, 53, 69, 0.9), rgba(26, 48, 64, 0.95));
+      border: 1px solid var(--border);
+      border-radius: var(--r-xl);
+      padding: var(--sp-xl);
+      width: 100%;
+      max-width: 460px;
+      box-shadow: var(--shadow-lg);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: var(--sp-lg);
+    }
+
+    .hero-card-dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .hero-card-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .hero-card-dot:nth-child(1) {
+      background: #ff5f57;
+    }
+
+    .hero-card-dot:nth-child(2) {
+      background: var(--forsythia);
+    }
+
+    .hero-card-dot:nth-child(3) {
+      background: #28c840;
+    }
+
+    .hero-card-title {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+    }
+
+    .hero-card-metric {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-md);
+    }
+
+    .metric-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--sp-md);
+      background: rgba(255, 200, 1, 0.05);
+      border: 1px solid rgba(255, 200, 1, 0.1);
+      border-radius: var(--r-md);
+      transition: border-color var(--dur-micro) var(--ease-out),
+        background var(--dur-micro) var(--ease-out);
+    }
+
+    .metric-row:hover {
+      border-color: rgba(255, 200, 1, 0.25);
+      background: rgba(255, 200, 1, 0.08);
+    }
+
+    .metric-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: var(--sp-sm);
+    }
+
+    .metric-label svg {
+      width: 16px;
+      height: 16px;
+      opacity: 0.7;
+    }
+
+    .metric-value {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--forsythia);
+    }
+
+    .metric-badge {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      padding: 2px 6px;
+      border-radius: var(--r-full);
+      background: rgba(40, 200, 64, 0.15);
+      color: #28c840;
+    }
+
+    /* Two-column hero layout */
+    .hero-grid-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-3xl);
+      align-items: center;
+    }
+
+    /* ════════════════════════════════════════════
+       SECTION COMMON
+    ════════════════════════════════════════════ */
+    section {
+      padding: var(--sp-4xl) 0;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sp-sm);
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--forsythia);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: var(--sp-md);
+    }
+
+    .section-label svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .section-headline {
+      font-family: var(--font-mono);
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--text-primary);
+      margin-bottom: var(--sp-md);
+    }
+
+    .section-sub {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 540px;
+      line-height: 1.7;
+    }
+
+    .section-header {
+      margin-bottom: var(--sp-3xl);
+    }
+
+    /* ════════════════════════════════════════════
+       FEATURES — BENTO (desktop) / ACCORDION (mobile)
+    ════════════════════════════════════════════ */
+    #features {
+      background: var(--bg-primary);
+    }
+
+    /* BENTO GRID */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      gap: var(--sp-md);
+    }
+
+    .bento-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--r-lg);
+      padding: var(--sp-xl);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: border-color var(--dur-micro) var(--ease-out),
+        transform var(--dur-micro) var(--ease-out),
+        box-shadow var(--dur-micro) var(--ease-out);
+    }
+
+    .bento-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 200, 1, 0.04), transparent);
+      opacity: 0;
+      transition: opacity var(--dur-micro) var(--ease-out);
+    }
+
+    .bento-card:hover,
+    .bento-card.active {
+      border-color: var(--forsythia);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow-yellow);
+    }
+
+    .bento-card:hover::before,
+    .bento-card.active::before {
+      opacity: 1;
+    }
+
+    /* Large card spans */
+    .bento-card.span-2 {
+      grid-column: span 2;
+    }
+
+    .bento-card.span-full {
+      grid-column: 1 / -1;
+    }
+
+    .bento-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, rgba(255, 200, 1, 0.15), rgba(255, 153, 50, 0.1));
+      border: 1px solid rgba(255, 200, 1, 0.2);
+      border-radius: var(--r-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--sp-lg);
+      transition: background var(--dur-micro) var(--ease-out),
+        border-color var(--dur-micro) var(--ease-out);
+    }
+
+    .bento-card:hover .bento-icon,
+    .bento-card.active .bento-icon {
+      background: linear-gradient(135deg, rgba(255, 200, 1, 0.25), rgba(255, 153, 50, 0.2));
+      border-color: rgba(255, 200, 1, 0.4);
+    }
+
+    .bento-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .bento-icon svg path,
+    .bento-icon svg g {
+      stroke: var(--forsythia);
+    }
+
+    .bento-icon svg [fill="#000000"] {
+      fill: var(--forsythia);
+      stroke: none;
+    }
+
+    .bento-tag {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--forsythia);
+      letter-spacing: 0.1em;
+      margin-bottom: var(--sp-sm);
+    }
+
+    .bento-title {
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--sp-sm);
+      line-height: 1.3;
+    }
+
+    .bento-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* Expandable content inside bento */
+    .bento-expand {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--dur-layout) var(--ease-in-out),
+        opacity var(--dur-layout) var(--ease-in-out),
+        margin-top var(--dur-layout) var(--ease-in-out);
+      opacity: 0;
+    }
+
+    .bento-card.active .bento-expand {
+      max-height: 200px;
+      opacity: 1;
+      margin-top: var(--sp-md);
+    }
+
+    .bento-expand-inner {
+      padding-top: var(--sp-md);
+      border-top: 1px solid var(--border-light);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .bento-expand-inner ul {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .bento-expand-inner li::before {
+      content: '→ ';
+      color: var(--forsythia);
+    }
+
+    /* ACCORDION (mobile only — display:none by default) */
+    .accordion-list {
+      display: none;
+      flex-direction: column;
+      gap: var(--sp-sm);
+    }
+
+    .accordion-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--r-md);
+      overflow: hidden;
+      transition: border-color var(--dur-micro) var(--ease-out);
+    }
+
+    .accordion-item.active {
+      border-color: var(--forsythia);
+    }
+
+    .accordion-trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--sp-md);
+      padding: var(--sp-lg);
+      text-align: left;
+      transition: background var(--dur-micro) var(--ease-out);
+    }
+
+    .accordion-trigger:hover {
+      background: rgba(255, 200, 1, 0.04);
+    }
+
+    .accordion-trigger-left {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-md);
+    }
+
+    .accordion-icon {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, rgba(255, 200, 1, 0.15), rgba(255, 153, 50, 0.1));
+      border: 1px solid rgba(255, 200, 1, 0.2);
+      border-radius: var(--r-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .accordion-icon svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .accordion-icon svg path {
+      stroke: var(--forsythia);
+    }
+
+    .accordion-icon svg [fill="#000000"] {
+      fill: var(--forsythia);
+      stroke: none;
+    }
+
+    .accordion-trigger-title {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .accordion-chevron {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      color: var(--text-muted);
+      transition: transform var(--dur-micro) var(--ease-out),
+        color var(--dur-micro) var(--ease-out);
+    }
+
+    .accordion-item.active .accordion-chevron {
+      transform: rotate(180deg);
+      color: var(--forsythia);
+    }
+
+    .accordion-panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--dur-layout) var(--ease-in-out);
+    }
+
+    .accordion-item.active .accordion-panel {
+      max-height: 300px;
+    }
+
+    .accordion-panel-inner {
+      padding: 0 var(--sp-lg) var(--sp-lg);
+      border-top: 1px solid var(--border-light);
+      padding-top: var(--sp-md);
+    }
+
+    .accordion-panel-inner p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .accordion-panel-inner ul {
+      margin-top: var(--sp-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .accordion-panel-inner li {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .accordion-panel-inner li::before {
+      content: '→ ';
+      color: var(--forsythia);
+    }
+
+    /* ════════════════════════════════════════════
+       PRICING SECTION — Feature 1
+    ════════════════════════════════════════════ */
+    #pricing {
+      background: var(--nocturnal);
+    }
+
+    .pricing-controls {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--sp-lg);
+      margin-bottom: var(--sp-3xl);
+      justify-content: center;
+    }
+
+    /* Billing toggle */
+    .billing-toggle {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-sm);
+      background: rgba(23, 43, 54, 0.6);
+      border: 1px solid var(--border-light);
+      border-radius: var(--r-full);
+      padding: 4px;
+    }
+
+    .billing-btn {
+      padding: 0.4rem 1rem;
+      border-radius: var(--r-full);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: background var(--dur-micro) var(--ease-out),
+        color var(--dur-micro) var(--ease-out);
+    }
+
+    .billing-btn.active {
+      background: var(--forsythia);
+      color: var(--oceanic);
+    }
+
+    .billing-save {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      padding: 2px 8px;
+      background: rgba(40, 200, 64, 0.15);
+      color: #28c840;
+      border-radius: var(--r-full);
+      border: 1px solid rgba(40, 200, 64, 0.3);
+    }
+
+    /* Currency selector */
+    .currency-select {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-xs);
+      background: rgba(23, 43, 54, 0.6);
+      border: 1px solid var(--border-light);
+      border-radius: var(--r-full);
+      padding: 4px 6px 4px 12px;
+      transition: border-color var(--dur-micro) var(--ease-out);
+    }
+
+    .currency-select:hover {
+      border-color: var(--forsythia);
+    }
+
+    .currency-select select {
+      background: transparent;
+      border: none;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      outline: none;
+      padding-right: 4px;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .currency-select-icon {
+      width: 14px;
+      height: 14px;
+      color: var(--text-muted);
+    }
+
+    /* Pricing grid */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-lg);
+      align-items: start;
+    }
+
+    .pricing-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--r-xl);
+      padding: var(--sp-xl);
+      position: relative;
+      overflow: hidden;
+      transition: transform var(--dur-micro) var(--ease-out),
+        box-shadow var(--dur-micro) var(--ease-out),
+        border-color var(--dur-micro) var(--ease-out);
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .pricing-card.featured {
+      border-color: var(--forsythia);
+      background: linear-gradient(160deg, rgba(26, 48, 64, 1), rgba(30, 53, 69, 0.95));
+      transform: scale(1.03);
+    }
+
+    .pricing-card.featured:hover {
+      transform: scale(1.03) translateY(-4px);
+      box-shadow: var(--shadow-glow-yellow);
+    }
+
+    .pricing-featured-tag {
+      position: absolute;
+      top: 0;
+      right: var(--sp-xl);
+      background: var(--forsythia);
+      color: var(--oceanic);
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      border-radius: 0 0 var(--r-sm) var(--r-sm);
+    }
+
+    .pricing-tier {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--forsythia);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: var(--sp-sm);
+    }
+
+    .pricing-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: var(--sp-xl);
+      line-height: 1.5;
+    }
+
+    .pricing-amount {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      margin-bottom: var(--sp-xs);
+    }
+
+    .pricing-symbol {
+      font-family: var(--font-mono);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .pricing-price {
+      font-family: var(--font-mono);
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1;
+      transition: none;
+      /* price strings transition individually */
+    }
+
+    .pricing-period {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: var(--sp-xl);
+    }
+
+    .pricing-divider {
+      height: 1px;
+      background: var(--border-light);
+      margin: var(--sp-xl) 0;
+    }
+
+    .pricing-features {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-sm);
+    }
+
+    .pricing-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--sp-sm);
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .pricing-feature-check {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: rgba(255, 200, 1, 0.15);
+      border: 1px solid rgba(255, 200, 1, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .pricing-feature-check::after {
+      content: '✓';
+      font-size: 0.6rem;
+      color: var(--forsythia);
+      font-weight: 700;
+    }
+
+    .pricing-cta {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: var(--sp-xl);
+      padding: 0.75rem 1rem;
+      border-radius: var(--r-md);
+      font-weight: 700;
+      font-size: 0.875rem;
+      transition: background var(--dur-micro) var(--ease-out),
+        transform var(--dur-micro) var(--ease-out),
+        box-shadow var(--dur-micro) var(--ease-out);
+    }
+
+    .pricing-cta-primary {
+      background: var(--forsythia);
+      color: var(--oceanic);
+    }
+
+    .pricing-cta-primary:hover {
+      background: #ffd133;
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-glow-yellow);
+    }
+
+    .pricing-cta-outline {
+      background: transparent;
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+    }
+
+    .pricing-cta-outline:hover {
+      border-color: var(--forsythia);
+      background: rgba(255, 200, 1, 0.06);
+      transform: translateY(-1px);
+    }
+
+    /* ════════════════════════════════════════════
+       STATS / SOCIAL PROOF
+    ════════════════════════════════════════════ */
+    #social-proof {
+      background: var(--bg-primary);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--sp-lg);
+      margin-bottom: var(--sp-3xl);
+    }
+
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--r-lg);
+      padding: var(--sp-xl);
+      text-align: center;
+      transition: border-color var(--dur-micro) var(--ease-out),
+        transform var(--dur-micro) var(--ease-out);
+    }
+
+    .stat-card:hover {
+      border-color: rgba(255, 200, 1, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .stat-number {
+      font-family: var(--font-mono);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--forsythia);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Testimonials */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-lg);
+    }
+
+    .testimonial-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--r-lg);
+      padding: var(--sp-xl);
+      transition: border-color var(--dur-micro) var(--ease-out),
+        transform var(--dur-micro) var(--ease-out);
+    }
+
+    .testimonial-card:hover {
+      border-color: rgba(255, 200, 1, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .testimonial-quote {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: var(--sp-lg);
+    }
+
+    .testimonial-quote::before {
+      content: '"';
+      color: var(--forsythia);
+      font-size: 1.2rem;
+    }
+
+    .testimonial-quote::after {
+      content: '"';
+      color: var(--forsythia);
+      font-size: 1.2rem;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-md);
+    }
+
+    .testimonial-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--forsythia), var(--saffron));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--oceanic);
+      flex-shrink: 0;
+    }
+
+    .testimonial-name {
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: var(--text-primary);
+    }
+
+    .testimonial-role {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* ════════════════════════════════════════════
+       CTA BANNER
+    ════════════════════════════════════════════ */
+    #cta-banner {
+      background: linear-gradient(135deg, var(--nocturnal), var(--oceanic));
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+      padding: var(--sp-4xl) 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #cta-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(255, 200, 1, 0.06), transparent);
+    }
+
+    .cta-banner-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-banner-headline {
+      font-family: var(--font-mono);
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: var(--sp-md);
+    }
+
+    .cta-banner-sub {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: var(--sp-2xl);
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-banner-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: var(--sp-md);
+    }
+
+    /* ════════════════════════════════════════════
+       FOOTER
+    ════════════════════════════════════════════ */
+    footer {
+      background: var(--oceanic);
+      border-top: 1px solid var(--border-light);
+      padding: var(--sp-3xl) 0 var(--sp-xl);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: var(--sp-2xl);
+      margin-bottom: var(--sp-2xl);
+    }
+
+    .footer-brand-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-top: var(--sp-md);
+      line-height: 1.65;
+      max-width: 240px;
+    }
+
+    .footer-col-title {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: var(--sp-md);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-sm);
+    }
+
+    .footer-links a {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      transition: color var(--dur-micro) var(--ease-out);
+    }
+
+    .footer-links a:hover {
+      color: var(--forsythia);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: var(--sp-xl);
+      border-top: 1px solid var(--border-light);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      gap: var(--sp-md);
+    }
+
+    .footer-bottom-right {
+      display: flex;
+      gap: var(--sp-lg);
+    }
+
+    .footer-bottom-right a {
+      color: var(--text-muted);
+      transition: color var(--dur-micro) var(--ease-out);
+    }
+
+    .footer-bottom-right a:hover {
+      color: var(--forsythia);
+    }
+
+    /* ════════════════════════════════════════════
+       RESPONSIVE BREAKPOINTS
+    ════════════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .hero-grid-layout {
+        grid-template-columns: 1fr;
+        gap: var(--sp-2xl);
+      }
+
+      .hero-visual {
+        display: none;
+      }
+
+      .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .bento-card.span-2 {
+        grid-column: span 1;
+      }
+
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: var(--sp-xl);
+        max-width: 420px;
+        margin: 0 auto;
+      }
+
+      .pricing-card.featured {
+        transform: scale(1);
+      }
+
+      .pricing-card.featured:hover {
+        transform: translateY(-4px);
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--sp-xl);
+      }
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        --sp-4xl: 3rem;
+        --sp-3xl: 2.5rem;
+      }
+
+      .nav-links,
+      .nav-actions {
+        display: none;
+      }
+
+      .nav-mobile-toggle {
+        display: flex;
+      }
+
+      /* *** BENTO → ACCORDION SWAP *** */
+      .bento-grid {
+        display: none;
+      }
+
+      .accordion-list {
+        display: flex;
+      }
+
+      /* Stats 2-col on mobile */
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-stats {
+        gap: var(--sp-lg);
+      }
+
+      .hero-stat-sep {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 var(--sp-md);
+      }
+
+      .pricing-controls {
+        flex-direction: column;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* ════════════════════════════════════════════
+       SCROLLBAR
+    ════════════════════════════════════════════ */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--oceanic);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--nocturnal);
+      border-radius: 3px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--forsythia);
+    }
+
+    /* ════════════════════════════════════════════
+       UPGRADES STYLING
+    ════════════════════════════════════════════ */
+    
+    /* Live Status Pulse Badge */
+    .nav-status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #28c840;
+      background: rgba(40, 200, 64, 0.1);
+      padding: 4px 8px;
+      border-radius: var(--r-full);
+      border: 1px solid rgba(40, 200, 64, 0.2);
+      user-select: none;
+    }
+    
+    .status-pulse-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #28c840;
+      box-shadow: 0 0 0 rgba(40, 200, 64, 0.4);
+      animation: status-pulse 2s infinite;
+    }
+    
+    @keyframes status-pulse {
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(40, 200, 64, 0.7);
+      }
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 6px rgba(40, 200, 64, 0);
+      }
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(40, 200, 64, 0);
+      }
+    }
+
+    /* Command Palette Overlay */
+    .cmd-palette-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(23, 43, 54, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 9999;
+      display: none;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 15vh;
+    }
+    
+    .cmd-palette-modal {
+      width: 90%;
+      max-width: 600px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow-lg), var(--shadow-glow-yellow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    
+    .cmd-palette-input-wrap {
+      display: flex;
+      align-items: center;
+      padding: var(--sp-md) var(--sp-lg);
+      border-bottom: 1px solid var(--border-light);
+      gap: var(--sp-sm);
+    }
+    
+    .cmd-palette-input-wrap svg {
+      width: 20px;
+      height: 20px;
+      color: var(--text-muted);
+    }
+    
+    .cmd-palette-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      outline: none;
+    }
+    
+    .cmd-palette-input::placeholder {
+      color: var(--text-muted);
+      opacity: 0.5;
+    }
+    
+    .cmd-palette-results {
+      max-height: 280px;
+      overflow-y: auto;
+      padding: var(--sp-sm);
+    }
+    
+    .cmd-palette-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--sp-md) var(--sp-lg);
+      border-radius: var(--r-sm);
+      cursor: pointer;
+      user-select: none;
+      transition: background var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out);
+      border: 1px solid transparent;
+    }
+    
+    .cmd-palette-item.selected {
+      background: rgba(255, 200, 1, 0.1);
+      border-color: rgba(255, 200, 1, 0.3);
+    }
+    
+    .cmd-palette-item-left {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-md);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+    
+    .cmd-palette-item.selected .cmd-palette-item-left {
+      color: var(--forsythia);
+    }
+    
+    .cmd-palette-item-left svg {
+      width: 16px;
+      height: 16px;
+      color: var(--text-muted);
+    }
+    
+    .cmd-palette-item.selected .cmd-palette-item-left svg {
+      color: var(--forsythia);
+    }
+    
+    .cmd-palette-kbd {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      background: var(--oceanic);
+      border: 1px solid var(--border-light);
+      padding: 2px 6px;
+      border-radius: var(--r-sm);
+      color: var(--text-muted);
+    }
+
+    .cmd-palette-item.selected .cmd-palette-kbd {
+      border-color: rgba(255, 200, 1, 0.3);
+      color: var(--forsythia);
+    }
+    
+    .cmd-palette-footer {
+      padding: var(--sp-sm) var(--sp-lg);
+      border-top: 1px solid var(--border-light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      background: rgba(23, 43, 54, 0.5);
+    }
+    
+    .cmd-palette-help {
+      display: flex;
+      gap: var(--sp-md);
+    }
+    
+    .cmd-palette-help span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* Hero Particles Canvas Background */
+    #hero-particles {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* MacOS Styled Terminal Simulation */
+    .terminal-window {
+      background: #0f1c24;
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      box-shadow: var(--shadow-lg), var(--shadow-glow-teal);
+      width: 100%;
+      max-width: 480px;
+      overflow: hidden;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-primary);
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .terminal-header {
+      background: #142530;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-light);
+      user-select: none;
+    }
+    
+    .terminal-controls {
+      display: flex;
+      gap: 6px;
+    }
+    
+    .terminal-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+    
+    .terminal-dot.close { background: #ff5f57; }
+    .terminal-dot.minimize { background: #ffbd2e; }
+    .terminal-dot.maximize { background: #27c93f; }
+    
+    .terminal-title {
+      color: var(--text-muted);
+      font-size: 0.65rem;
+      letter-spacing: 0.05em;
+    }
+    
+    .terminal-body {
+      padding: var(--sp-md);
+      height: 230px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      line-height: 1.5;
+      background: #0d1a22;
+      text-align: left;
+    }
+    
+    .terminal-line {
+      display: flex;
+      gap: 8px;
+      word-break: break-all;
+    }
+    
+    .terminal-prompt {
+      color: var(--forsythia);
+      user-select: none;
+    }
+    
+    .terminal-output {
+      color: var(--text-muted);
+    }
+    
+    .terminal-output.success {
+      color: #28c840;
+    }
+    
+    .terminal-output.warning {
+      color: var(--saffron);
+    }
+    
+    .terminal-cursor {
+      display: inline-block;
+      width: 6px;
+      height: 12px;
+      background: var(--forsythia);
+      animation: cursor-blink 1s infinite;
+      vertical-align: middle;
+    }
+
+    @keyframes cursor-blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* Bento Visual Components styling */
+    .sparkline-container {
+      position: relative;
+      width: 100%;
+      height: 60px;
+      margin-top: var(--sp-md);
+      overflow: hidden;
+    }
+    
+    .sparkline-svg {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .sparkline-path {
+      fill: none;
+      stroke: var(--forsythia);
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-dasharray: 400;
+      stroke-dashoffset: 400;
+      animation: sparkline-draw 3s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
+    }
+    
+    @keyframes sparkline-draw {
+      to { stroke-dashoffset: 0; }
+    }
+    
+    /* Progress Rings styling */
+    .progress-rings-container {
+      display: flex;
+      gap: var(--sp-md);
+      margin-top: var(--sp-md);
+    }
+    
+    .progress-ring-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      flex: 1;
+    }
+    
+    .progress-circle-wrap {
+      position: relative;
+      width: 48px;
+      height: 48px;
+    }
+    
+    .progress-circle-bg {
+      fill: none;
+      stroke: var(--border-light);
+      stroke-width: 3.5;
+    }
+    
+    .progress-circle-val {
+      fill: none;
+      stroke: var(--forsythia);
+      stroke-width: 3.5;
+      stroke-linecap: round;
+      stroke-dasharray: 125.6; /* 2 * PI * 20 */
+      stroke-dashoffset: 125.6;
+      transition: stroke-dashoffset 800ms var(--ease-in-out);
+    }
+    
+    .bento-card:hover .circle-42,
+    .bento-card.active .circle-42 {
+      stroke-dashoffset: 72.8; /* 42% */
+    }
+    
+    .bento-card:hover .circle-67,
+    .bento-card.active .circle-67 {
+      stroke-dashoffset: 41.4; /* 67% */
+    }
+    
+    .progress-circle-text {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    
+    /* sliding progress bar style */
+    .bento-bar-container {
+      margin-top: var(--sp-md);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    
+    .bento-bar-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+    }
+    
+    .bento-bar-bg {
+      height: 6px;
+      background: var(--border-light);
+      border-radius: var(--r-full);
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .bento-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--forsythia), var(--saffron));
+      border-radius: var(--r-full);
+      width: 0;
+      transition: width 800ms var(--ease-in-out);
+    }
+    
+    .bento-card:hover .bento-bar-fill-75,
+    .bento-card.active .bento-bar-fill-75 {
+      width: 75%;
+    }
+    
+    .bento-card:hover .bento-bar-fill-90,
+    .bento-card.active .bento-bar-fill-90 {
+      width: 90%;
+    }
+    
+    /* Floating node animation for Card 3 */
+    .bento-nodes-container {
+      margin-top: var(--sp-md);
+      height: 65px;
+      position: relative;
+      border: 1px solid var(--border-light);
+      border-radius: var(--r-sm);
+      overflow: hidden;
+      background: rgba(23, 43, 54, 0.4);
+    }
+    
+    .bento-node {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--forsythia);
+      box-shadow: 0 0 8px var(--forsythia);
+    }
+    
+    .bento-node-1 { top: 20%; left: 20%; animation: node-float-1 3s ease-in-out infinite alternate; }
+    .bento-node-2 { top: 70%; left: 50%; animation: node-float-2 4s ease-in-out infinite alternate; }
+    .bento-node-3 { top: 30%; left: 80%; animation: node-float-3 3.5s ease-in-out infinite alternate; }
+    
+    @keyframes node-float-1 { 0% { transform: translate(0, 0); } 100% { transform: translate(12px, 8px); } }
+    @keyframes node-float-2 { 0% { transform: translate(0, 0); } 100% { transform: translate(-15px, -10px); } }
+    @keyframes node-float-3 { 0% { transform: translate(0, 0); } 100% { transform: translate(8px, -8px); } }
+    
+    .bento-nodes-svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    
+    /* Radar scan style */
+    .bento-radar {
+      position: relative;
+      width: 100%;
+      height: 65px;
+      margin-top: var(--sp-md);
+      border-radius: var(--r-sm);
+      overflow: hidden;
+      background: rgba(17, 76, 90, 0.1);
+      border: 1px solid rgba(17, 76, 90, 0.2);
+    }
+    
+    .bento-radar-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--forsythia), transparent);
+      box-shadow: 0 0 8px var(--forsythia);
+      animation: radar-scan 2.5s linear infinite;
+    }
+    
+    @keyframes radar-scan {
+      0% { top: 0%; opacity: 0; }
+      10%, 90% { opacity: 1; }
+      100% { top: 100%; opacity: 0; }
+    }
+
+    /* Pricing Transitions & Compare Table */
+    .price-container-wrap {
+      overflow: hidden;
+      display: inline-flex;
+      align-items: baseline;
+    }
+    
+    .pricing-price.flip {
+      animation: price-flip-anim 350ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    @keyframes price-flip-anim {
+      0% { transform: rotateX(0deg); opacity: 1; }
+      50% { transform: rotateX(-90deg); opacity: 0; }
+      51% { transform: rotateX(90deg); opacity: 0; }
+      100% { transform: rotateX(0deg); opacity: 1; }
+    }
+    
+    .pricing-tax-badge {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      opacity: 0.8;
+      margin-top: 4px;
+      display: block;
+      height: 1rem;
+    }
+    
+    .pricing-table-btn-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: var(--sp-xl);
+    }
+    
+    .comparison-table-wrapper {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 400ms var(--ease-in-out), margin-top 400ms var(--ease-in-out);
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .comparison-table-wrapper.expanded {
+      max-height: 1200px;
+      margin-top: var(--sp-2xl);
+    }
+    
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      border: 1px solid var(--border-light);
+      background: rgba(23, 43, 54, 0.4);
+      border-radius: var(--r-md);
+      overflow: hidden;
+    }
+    
+    .comparison-table th, .comparison-table td {
+      padding: var(--sp-md) var(--sp-lg);
+      text-align: left;
+      border-bottom: 1px solid var(--border-light);
+    }
+    
+    .comparison-table th {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.75rem;
+      color: var(--text-primary);
+      text-transform: uppercase;
+      background: rgba(17, 76, 90, 0.6);
+    }
+    
+    .comparison-table td:first-child {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+    
+    .comparison-table tr:hover {
+      background: rgba(255, 200, 1, 0.02);
+    }
+    
+    .table-check {
+      color: var(--forsythia);
+      font-weight: bold;
+    }
+    
+    .table-dash {
+      color: var(--text-muted);
+      opacity: 0.3;
+    }
+
+    /* Tech Partners Logo Marquee Banner */
+    .marquee-section {
+      padding: var(--sp-lg) 0;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+      background: rgba(23, 43, 54, 0.2);
+      overflow: hidden;
+      position: relative;
+      user-select: none;
+    }
+    
+    .marquee-container {
+      display: flex;
+      width: max-content;
+      animation: marquee-scroll 25s linear infinite;
+      gap: var(--sp-4xl);
+    }
+    
+    .marquee-track {
+      display: flex;
+      gap: var(--sp-4xl);
+      align-items: center;
+    }
+    
+    .marquee-logo {
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      opacity: 0.4;
+      letter-spacing: 0.15em;
+      transition: opacity var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out);
+      cursor: default;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    
+    .marquee-logo:hover {
+      opacity: 0.9;
+      color: var(--forsythia);
+    }
+    
+    .marquee-logo svg {
+      width: 16px;
+      height: 16px;
+    }
+    
+    @keyframes marquee-scroll {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+
+    /* Stats Card Progress Bars */
+    .stat-progress-bg {
+      height: 4px;
+      background: var(--border-light);
+      border-radius: var(--r-full);
+      margin-top: var(--sp-sm);
+      overflow: hidden;
+      width: 100%;
+    }
+    
+    .stat-progress-fill {
+      height: 100%;
+      background: var(--forsythia);
+      width: 0;
+      transition: width 1500ms cubic-bezier(0.1, 1, 0.1, 1);
+    }
+
+    /* FAQ Section */
+    #faq {
+      background: var(--bg-primary);
+      border-top: 1px solid var(--border-light);
+    }
+    
+    .faq-grid {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-sm);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--r-md);
+      overflow: hidden;
+      transition: border-color var(--dur-micro) var(--ease-out);
+    }
+    
+    .faq-item.active {
+      border-color: var(--forsythia);
+    }
+    
+    .faq-trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--sp-lg);
+      text-align: left;
+      cursor: pointer;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      background: none;
+      border: none;
+      outline: none;
+      transition: background var(--dur-micro) var(--ease-out);
+    }
+    
+    .faq-trigger:hover {
+      background: rgba(255, 200, 1, 0.02);
+    }
+    
+    .faq-chevron {
+      width: 18px;
+      height: 18px;
+      color: var(--text-muted);
+      transition: transform var(--dur-micro) var(--ease-out);
+    }
+    
+    .faq-item.active .faq-chevron {
+      transform: rotate(180deg);
+      color: var(--forsythia);
+    }
+    
+    .faq-panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--dur-layout) var(--ease-in-out);
+    }
+    
+    .faq-item.active .faq-panel {
+      max-height: 200px;
+    }
+    
+    .faq-panel-inner {
+      padding: 0 var(--sp-lg) var(--sp-lg);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      border-top: 1px solid var(--border-light);
+      padding-top: var(--sp-md);
+    }
+
+    /* ════════════════════════════════════════════
+       SCROLLBAR
+    ════════════════════════════════════════════ */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: var(--oceanic);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: var(--nocturnal);
+      border-radius: 3px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--forsythia);
+    }
+  
+    /* ── SCROLL TO TOP ── */
+    .scroll-to-top {
+      position: fixed;
+      bottom: var(--sp-xl);
+      right: var(--sp-xl);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(26, 48, 64, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      color: var(--forsythia);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 95;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: opacity var(--dur-micro) var(--ease-out), transform var(--dur-micro) var(--ease-out), background var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out), visibility var(--dur-micro);
+    }
+    .scroll-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .scroll-to-top:hover {
+      background: var(--forsythia);
+      color: var(--oceanic);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow-yellow);
+    }
+    .scroll-to-top svg {
+      width: 20px;
+      height: 20px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- ═══════════════════════════════════
+       LOADER
+  ═══════════════════════════════════ -->
+  <div id="loader" aria-hidden="true" role="presentation">
+    <div class="loader-ring"></div>
+    <span class="loader-text">INITIALIZING NEURALFLOW</span>
+  </div>
+
+  <!-- ═══════════════════════════════════
+       HEADER
+  ═══════════════════════════════════ -->
+  <header id="site-header" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main navigation">
+        <!-- Logo -->
+        <a href="#hero" class="nav-logo" aria-label="NeuralFlow home">
+          <span class="logo-icon" aria-hidden="true">
+            <!-- cube-16-solid.svg -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+              <path fill="#172B36"
+                d="M8.372 1.349a.75.75 0 0 0-.744 0l-4.81 2.748L8 7.131l5.182-3.034zM14 5.357L8.75 8.43v6.005l4.872-2.784A.75.75 0 0 0 14 11zm-6.75 9.078V8.43L2 5.357V11c0 .27.144.518.378.651z" />
+            </svg>
+          </span>
+          Neural<span style="color:var(--forsythia)">Flow</span>
+        </a>
+
+        <!-- Desktop nav links -->
+        <ul class="nav-links" role="list">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#social-proof">Customers</a></li>
+          <li><a href="#cta-banner">Docs</a></li>
+          <li>
+            <div class="nav-status-badge" aria-label="System status: all systems operational">
+              <span class="status-pulse-dot" aria-hidden="true"></span>
+              System: Online
+            </div>
+          </li>
+        </ul>
+
+        <!-- Desktop actions -->
+        <div class="nav-actions">
+          <button class="btn-ghost" id="search-btn" aria-label="Open command palette (Ctrl+K)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill="currentColor"
+                d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33l-1.42 1.42l-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z" />
+            </svg>
+            Search <kbd class="cmd-palette-kbd" style="margin-left: 6px; font-size: 0.65rem;">⌘K</kbd>
+          </button>
+          <a href="#pricing" class="btn-secondary" id="nav-signin">Sign In</a>
+          <a href="#pricing" class="btn-primary" id="nav-getstarted">Get Started</a>
+        </div>
+
+        <!-- Mobile toggle -->
+        <button class="nav-mobile-toggle" id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false"
+          aria-controls="mobile-nav">
+          <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+          <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+            style="display:none" aria-hidden="true">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </nav>
+    </div>
+
+    <!-- Mobile nav -->
+    <nav id="mobile-nav" class="nav-mobile" aria-label="Mobile navigation">
+      <div class="mobile-nav-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-light); padding-bottom: var(--sp-md); margin-bottom: var(--sp-sm);">
+        <button class="mobile-nav-back-btn" id="mobile-nav-back" aria-label="Go back or close menu" style="color: var(--text-muted); display: flex; align-items: center; gap: var(--sp-xs); font-size: 0.875rem; font-weight: 500; cursor: pointer; border: none; background: none;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15.75 19.5L8.25 12l7.5-7.5" />
+          </svg>
+          Back
+        </button>
+        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--forsythia);">NEURALFLOW</span>
+      </div>
+      <a href="#features" class="mobile-nav-link">Features</a>
+      <a href="#pricing" class="mobile-nav-link">Pricing</a>
+      <a href="#social-proof" class="mobile-nav-link">Customers</a>
+      <a href="#cta-banner" class="mobile-nav-link">Docs</a>
+      <a href="#pricing" class="btn-primary btn-hero" style="text-align:center;margin-top:var(--sp-md)">Get Started
+        Free</a>
+    </nav>
+  </header>
+
+  <!-- ═══════════════════════════════════
+       MAIN
+  ═══════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ── HERO ── -->
+    <section id="hero" aria-labelledby="hero-headline">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <canvas id="hero-particles" aria-hidden="true"></canvas>
+      <div class="orb orb-1" aria-hidden="true"></div>
+      <div class="orb orb-2" aria-hidden="true"></div>
+      <div class="orb orb-3" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-grid-layout">
+          <!-- Left: copy -->
+          <div class="hero-content">
+            <div class="hero-badge reveal" aria-label="Live platform">
+              <span class="hero-badge-dot" aria-hidden="true"></span>
+              AI PLATFORM &nbsp;·&nbsp; PHASE 1 LIVE
+            </div>
+
+            <h1 class="hero-headline reveal" id="hero-headline">
+              Automate.<br />
+              <span class="accent">Predict.</span><br />
+              <span class="accent-saffron">Scale.</span>
+            </h1>
+
+            <p class="hero-sub reveal">
+              NeuralFlow is the next-generation AI data automation platform — engineered for engineering teams who
+              demand architectural integrity, enterprise-grade performance, and intelligence at scale.
+            </p>
+
+            <div class="hero-cta reveal">
+              <a href="#pricing" class="btn-primary btn-hero" id="hero-get-started">
+                Start Building Free
+                <!-- arrow-trending-up icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 0 1 5.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                </svg>
+              </a>
+              <a href="#features" class="btn-secondary btn-hero" id="hero-view-features">
+                <!-- link icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+                </svg>
+                View Platform
+              </a>
+            </div>
+
+            <div class="hero-stats reveal" role="list" aria-label="Platform statistics">
+              <div class="hero-stat-item" role="listitem">
+                <span class="hero-stat-value" aria-label="99.99% uptime">99.99%</span>
+                <span class="hero-stat-label">Uptime SLA</span>
+              </div>
+              <div class="hero-stat-item" role="listitem">
+                <span class="hero-stat-value" aria-label="40 millisecond latency">&lt;40ms</span>
+                <span class="hero-stat-label">Avg Latency</span>
+              </div>
+              <div class="hero-stat-item" role="listitem">
+                <span class="hero-stat-value" aria-label="12,000 plus customers">12K+</span>
+                <span class="hero-stat-label">Customers</span>
+              </div>
+              <div class="hero-stat-item" role="listitem">
+                <span class="hero-stat-value" aria-label="4.2 billion events processed">4.2B</span>
+                <span class="hero-stat-label">Events/month</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: macOS terminal simulation mockup -->
+          <div class="hero-visual animate-terminal reveal" aria-hidden="true">
+            <div class="terminal-window">
+              <div class="terminal-header">
+                <div class="terminal-controls">
+                  <span class="terminal-dot close"></span>
+                  <span class="terminal-dot minimize"></span>
+                  <span class="terminal-dot maximize"></span>
+                </div>
+                <span class="terminal-title">neuralflow-shell — bash</span>
+                <div style="width: 30px;"></div>
+              </div>
+              <div class="terminal-body" id="terminal-body">
+                <div class="terminal-line">
+                  <span class="terminal-prompt">neuralflow$</span>
+                  <span class="terminal-command-container"></span><span class="terminal-cursor"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FEATURES (Bento + Accordion) — Feature 2 ── -->
+    <section id="features" aria-labelledby="features-headline">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-label" aria-hidden="true">
+            <!-- cog-8-tooth.svg inline -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                <path
+                  d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93c.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 0 1 1.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204c.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78c-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 0 1-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107c-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93c-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 0 1-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204c-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78c.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 0 1 .12-1.45l.773-.773a1.125 1.125 0 0 1 1.45-.12l.737.527c.35.25.807.272 1.204.107c.397-.165.71-.505.78-.929l.15-.894Z" />
+                <path d="M15 12a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z" />
+              </g>
+            </svg>
+            CORE PLATFORM
+          </p>
+          <h2 class="section-headline" id="features-headline">
+            Engineering-grade<br />
+            <span style="color:var(--forsythia)">AI infrastructure</span>
+          </h2>
+          <p class="section-sub">
+            Every component is built for production — with strict state isolation, zero-dependency transitions, and
+            hardware-accelerated motion.
+          </p>
+        </header>
+
+        <!-- ══ BENTO GRID (desktop) ══ -->
+        <div class="bento-grid reveal" id="bento-grid" role="list" aria-label="Feature showcase">
+
+          <!-- Card 0 -->
+          <article class="bento-card span-2" data-index="0" role="listitem" tabindex="0" aria-expanded="false">
+            <div class="bento-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path fill="none" stroke="#FFC801" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 0 1 5.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+              </svg>
+            </div>
+            <p class="bento-tag">INTELLIGENCE</p>
+            <h3 class="bento-title">Adaptive ML Pipeline Orchestration</h3>
+            <p class="bento-desc">Self-optimizing machine learning pipelines that adapt to real-time data drift,
+              automatically retraining models and routing inference requests to the highest-confidence node.</p>
+            
+            <!-- SVG Sparkline Visual -->
+            <div class="sparkline-container">
+              <svg class="sparkline-svg" viewBox="0 0 200 60">
+                <defs>
+                  <linearGradient id="sparkline-grad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="var(--forsythia)" stop-opacity="0.25"></stop>
+                    <stop offset="100%" stop-color="var(--forsythia)" stop-opacity="0"></stop>
+                  </linearGradient>
+                </defs>
+                <path class="sparkline-path" d="M 0 50 Q 20 20 40 45 T 80 15 T 120 40 T 160 10 L 200 35"></path>
+                <path class="sparkline-path sparkline-gradient" d="M 0 50 Q 20 20 40 45 T 80 15 T 120 40 T 160 10 L 200 35 L 200 60 L 0 60 Z" stroke="none"></path>
+              </svg>
+            </div>
+
+            <div class="bento-expand" aria-hidden="true">
+              <div class="bento-expand-inner">
+                <ul>
+                  <li>Sub-40ms inference routing with confidence scoring</li>
+                  <li>Automatic data drift detection &amp; model versioning</li>
+                  <li>Multi-modal input support: tabular, NLP, vision</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 1 -->
+          <article class="bento-card" data-index="1" role="listitem" tabindex="0" aria-expanded="false">
+            <div class="bento-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g fill="none" stroke="#FFC801" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                  <path d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
+                  <path d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
+                </g>
+              </svg>
+            </div>
+            <p class="bento-tag">ANALYTICS</p>
+            <h3 class="bento-title">Real-Time Observability</h3>
+            <p class="bento-desc">Sub-second visibility into every data event, model decision, and system metric —
+              powered by streaming aggregations.</p>
+
+            <!-- SVG Progress Rings Visual -->
+            <div class="progress-rings-container">
+              <div class="progress-ring-item">
+                <div class="progress-circle-wrap">
+                  <svg width="48" height="48" viewBox="0 0 48 48">
+                    <circle class="progress-circle-bg" cx="24" cy="24" r="20" />
+                    <circle class="progress-circle-val circle-42" cx="24" cy="24" r="20" />
+                  </svg>
+                  <span class="progress-circle-text">42%</span>
+                </div>
+                <span style="font-size: 0.65rem; color: var(--text-muted); font-family: var(--font-mono);">CPU</span>
+              </div>
+              <div class="progress-ring-item">
+                <div class="progress-circle-wrap">
+                  <svg width="48" height="48" viewBox="0 0 48 48">
+                    <circle class="progress-circle-bg" cx="24" cy="24" r="20" />
+                    <circle class="progress-circle-val circle-67" cx="24" cy="24" r="20" />
+                  </svg>
+                  <span class="progress-circle-text">67%</span>
+                </div>
+                <span style="font-size: 0.65rem; color: var(--text-muted); font-family: var(--font-mono);">MEM</span>
+              </div>
+            </div>
+
+            <div class="bento-expand" aria-hidden="true">
+              <div class="bento-expand-inner">
+                <ul>
+                  <li>Custom dashboards with live streaming data</li>
+                  <li>Anomaly detection via statistical baselines</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="bento-card" data-index="2" role="listitem" tabindex="0" aria-expanded="false">
+            <div class="bento-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path fill="none" stroke="#FFC801" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+              </svg>
+            </div>
+            <p class="bento-tag">AUTOMATION</p>
+            <h3 class="bento-title">Zero-Touch Workflow Engine</h3>
+            <p class="bento-desc">Declarative DAG-based automation that scales from single node to distributed cluster
+              without configuration overhead.</p>
+
+            <!-- CSS-only dynamic progress bars -->
+            <div class="bento-bar-container">
+              <div class="bento-bar-item">
+                <div class="bento-bar-label">
+                  <span>Job Success</span>
+                  <span>75%</span>
+                </div>
+                <div class="bento-bar-bg">
+                  <div class="bento-bar-fill bento-bar-fill-75"></div>
+                </div>
+              </div>
+              <div class="bento-bar-item">
+                <div class="bento-bar-label">
+                  <span>Queue Efficiency</span>
+                  <span>90%</span>
+                </div>
+                <div class="bento-bar-bg">
+                  <div class="bento-bar-fill bento-bar-fill-90"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bento-expand" aria-hidden="true">
+              <div class="bento-expand-inner">
+                <ul>
+                  <li>YAML-based workflow definition</li>
+                  <li>Automatic retry, backoff, &amp; dead-letter queuing</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="bento-card" data-index="3" role="listitem" tabindex="0" aria-expanded="false">
+            <div class="bento-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <path fill="#FFC801"
+                  d="M8.372 1.349a.75.75 0 0 0-.744 0l-4.81 2.748L8 7.131l5.182-3.034zM14 5.357L8.75 8.43v6.005l4.872-2.784A.75.75 0 0 0 14 11zm-6.75 9.078V8.43L2 5.357V11c0 .27.144.518.378.651z" />
+              </svg>
+            </div>
+            <p class="bento-tag">INFRASTRUCTURE</p>
+            <h3 class="bento-title">Multi-Cloud Data Fabric</h3>
+            <p class="bento-desc">Unified data layer across AWS, GCP, and Azure — with automatic partitioning and
+              cross-cloud query federation.</p>
+
+            <!-- Floating node fabric visual -->
+            <div class="bento-nodes-container">
+              <div class="bento-node bento-node-1"></div>
+              <div class="bento-node bento-node-2"></div>
+              <div class="bento-node bento-node-3"></div>
+              <svg class="bento-nodes-svg" viewBox="0 0 200 65">
+                <line x1="40" y1="20" x2="100" y2="45" stroke="var(--border-light)" stroke-width="1" stroke-dasharray="2 2" />
+                <line x1="100" y1="45" x2="160" y2="25" stroke="var(--border-light)" stroke-width="1" stroke-dasharray="2 2" />
+              </svg>
+            </div>
+
+            <div class="bento-expand" aria-hidden="true">
+              <div class="bento-expand-inner">
+                <ul>
+                  <li>Cross-cloud federated queries in &lt;100ms</li>
+                  <li>Automatic hot/cold tier migration</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="bento-card" data-index="4" role="listitem" tabindex="0" aria-expanded="false">
+            <div class="bento-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path fill="#FFC801" fill-rule="evenodd"
+                  d="M19.902 4.098a3.75 3.75 0 0 0-5.304 0l-4.5 4.5a3.75 3.75 0 0 0 1.035 6.037a.75.75 0 0 1-.646 1.353a5.25 5.25 0 0 1-1.449-8.45l4.5-4.5a5.25 5.25 0 1 1 7.424 7.424l-1.757 1.757a.75.75 0 1 1-1.06-1.06l1.757-1.757a3.75 3.75 0 0 0 0-5.304Zm-7.389 4.267a.75.75 0 0 1 1-.353a5.25 5.25 0 0 1 1.449 8.45l-4.5 4.5a5.25 5.25 0 1 1-7.424-7.424l1.757-1.757a.75.75 0 1 1 1.06 1.06l-1.757 1.757a3.75 3.75 0 1 0 5.304 5.304l4.5-4.5a3.75 3.75 0 0 0-1.035-6.037a.75.75 0 0 1-.354-1Z"
+                  clip-rule="evenodd" />
+              </svg>
+            </div>
+            <p class="bento-tag">INTEGRATIONS</p>
+            <h3 class="bento-title">240+ Native Connectors</h3>
+            <p class="bento-desc">Pre-built connectors for every major database, data warehouse, SaaS tool, and
+              messaging queue — no custom ETL required.</p>
+
+            <!-- Pulsing tech tags visual -->
+            <div style="display:flex; gap:8px; margin-top:15px; font-family:var(--font-mono); font-size:0.6rem;">
+              <span style="padding:4px 8px; border:1px solid var(--border-light); border-radius:4px; background:rgba(255,250,240,0.03);">KAFKA</span>
+              <span style="padding:4px 8px; border:1px solid var(--border-light); border-radius:4px; background:rgba(255,250,240,0.03);">SNOWFLAKE</span>
+              <span style="padding:4px 8px; border:1px solid var(--border-light); border-radius:4px; background:rgba(255,250,240,0.03);">K8S</span>
+            </div>
+
+            <div class="bento-expand" aria-hidden="true">
+              <div class="bento-expand-inner">
+                <ul>
+                  <li>Snowflake, BigQuery, Redshift, Databricks</li>
+                  <li>Kafka, Pulsar, SQS, Pub/Sub</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="bento-card" data-index="5" role="listitem" tabindex="0" aria-expanded="false">
+            <div class="bento-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g fill="none" stroke="#FFC801" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                  <path
+                    d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93c.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 0 1 1.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204c.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78c-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 0 1-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107c-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93c-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 0 1-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204c-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78c.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 0 1 .12-1.45l.773-.773a1.125 1.125 0 0 1 1.45-.12l.737.527c.35.25.807.272 1.204.107c.397-.165.71-.505.78-.929l.15-.894Z" />
+                  <path d="M15 12a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z" />
+                </g>
+              </svg>
+            </div>
+            <p class="bento-tag">GOVERNANCE</p>
+            <h3 class="bento-title">SOC 2 Type II Security</h3>
+            <p class="bento-desc">Enterprise-grade compliance with end-to-end encryption, role-based access control, and
+              immutable audit trails.</p>
+
+            <!-- Radar scanner sweep visual -->
+            <div class="bento-radar">
+              <div class="bento-radar-line"></div>
+              <div style="display:flex; justify-content:center; align-items:center; height:100%; font-family:var(--font-mono); font-size:0.6rem; color:#28c840; gap:6px;">
+                <span class="status-pulse-dot" style="width:5px; height:5px; margin:0;"></span> SECURE FRAMEWORK ENABLED
+              </div>
+            </div>
+
+            <div class="bento-expand" aria-hidden="true">
+              <div class="bento-expand-inner">
+                <ul>
+                  <li>AES-256 encryption at rest &amp; in transit</li>
+                  <li>GDPR, HIPAA, CCPA compliant</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /bento-grid -->
+
+        <!-- ══ ACCORDION (mobile) ══ -->
+        <div class="accordion-list reveal" id="accordion-list" role="list" aria-label="Feature showcase">
+
+          <article class="accordion-item" data-index="0" role="listitem">
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-0" id="acc-btn-0">
+              <span class="accordion-trigger-left">
+                <span class="accordion-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="none" stroke="#FFC801" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                      d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 0 1 5.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                  </svg>
+                </span>
+                <span class="accordion-trigger-title">Adaptive ML Pipeline Orchestration</span>
+              </span>
+              <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.5" d="m19.5 8.25l-7.5 7.5l-7.5-7.5" />
+              </svg>
+            </button>
+            <div class="accordion-panel" id="acc-panel-0" role="region" aria-labelledby="acc-btn-0">
+              <div class="accordion-panel-inner">
+                <p>Self-optimizing pipelines that adapt to real-time data drift, automatically retraining models and
+                  routing inference requests to the highest-confidence node.</p>
+                <ul>
+                  <li>Sub-40ms inference routing</li>
+                  <li>Automatic data drift detection &amp; model versioning</li>
+                  <li>Multi-modal input: tabular, NLP, vision</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="accordion-item" data-index="1" role="listitem">
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-1" id="acc-btn-1">
+              <span class="accordion-trigger-left">
+                <span class="accordion-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <g fill="none" stroke="#FFC801" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                      <path d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
+                      <path d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
+                    </g>
+                  </svg>
+                </span>
+                <span class="accordion-trigger-title">Real-Time Observability</span>
+              </span>
+              <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.5" d="m19.5 8.25l-7.5 7.5l-7.5-7.5" />
+              </svg>
+            </button>
+            <div class="accordion-panel" id="acc-panel-1" role="region" aria-labelledby="acc-btn-1">
+              <div class="accordion-panel-inner">
+                <p>Sub-second visibility into every data event, model decision, and system metric — powered by streaming
+                  aggregations.</p>
+                <ul>
+                  <li>Custom dashboards with live streaming data</li>
+                  <li>Anomaly detection via statistical baselines</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="accordion-item" data-index="2" role="listitem">
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-2" id="acc-btn-2">
+              <span class="accordion-trigger-left">
+                <span class="accordion-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="none" stroke="#FFC801" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                      d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                  </svg>
+                </span>
+                <span class="accordion-trigger-title">Zero-Touch Workflow Engine</span>
+              </span>
+              <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.5" d="m19.5 8.25l-7.5 7.5l-7.5-7.5" />
+              </svg>
+            </button>
+            <div class="accordion-panel" id="acc-panel-2" role="region" aria-labelledby="acc-btn-2">
+              <div class="accordion-panel-inner">
+                <p>Declarative DAG-based automation that scales from single node to distributed cluster without
+                  configuration overhead.</p>
+                <ul>
+                  <li>YAML-based workflow definition</li>
+                  <li>Automatic retry, backoff, &amp; dead-letter queuing</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="accordion-item" data-index="3" role="listitem">
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-3" id="acc-btn-3">
+              <span class="accordion-trigger-left">
+                <span class="accordion-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path fill="#FFC801"
+                      d="M8.372 1.349a.75.75 0 0 0-.744 0l-4.81 2.748L8 7.131l5.182-3.034zM14 5.357L8.75 8.43v6.005l4.872-2.784A.75.75 0 0 0 14 11zm-6.75 9.078V8.43L2 5.357V11c0 .27.144.518.378.651z" />
+                  </svg>
+                </span>
+                <span class="accordion-trigger-title">Multi-Cloud Data Fabric</span>
+              </span>
+              <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.5" d="m19.5 8.25l-7.5 7.5l-7.5-7.5" />
+              </svg>
+            </button>
+            <div class="accordion-panel" id="acc-panel-3" role="region" aria-labelledby="acc-btn-3">
+              <div class="accordion-panel-inner">
+                <p>Unified data layer across AWS, GCP, and Azure — with automatic partitioning and cross-cloud query
+                  federation.</p>
+                <ul>
+                  <li>Cross-cloud federated queries in &lt;100ms</li>
+                  <li>Automatic hot/cold tier migration</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="accordion-item" data-index="4" role="listitem">
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-4" id="acc-btn-4">
+              <span class="accordion-trigger-left">
+                <span class="accordion-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="#FFC801" fill-rule="evenodd"
+                      d="M19.902 4.098a3.75 3.75 0 0 0-5.304 0l-4.5 4.5a3.75 3.75 0 0 0 1.035 6.037a.75.75 0 0 1-.646 1.353a5.25 5.25 0 0 1-1.449-8.45l4.5-4.5a5.25 5.25 0 1 1 7.424 7.424l-1.757 1.757a.75.75 0 1 1-1.06-1.06l1.757-1.757a3.75 3.75 0 0 0 0-5.304Zm-7.389 4.267a.75.75 0 0 1 1-.353a5.25 5.25 0 0 1 1.449 8.45l-4.5 4.5a5.25 5.25 0 1 1-7.424-7.424l1.757-1.757a.75.75 0 1 1 1.06 1.06l-1.757 1.757a3.75 3.75 0 1 0 5.304 5.304l4.5-4.5a3.75 3.75 0 0 0-1.035-6.037a.75.75 0 0 1-.354-1Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </span>
+                <span class="accordion-trigger-title">240+ Native Connectors</span>
+              </span>
+              <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.5" d="m19.5 8.25l-7.5 7.5l-7.5-7.5" />
+              </svg>
+            </button>
+            <div class="accordion-panel" id="acc-panel-4" role="region" aria-labelledby="acc-btn-4">
+              <div class="accordion-panel-inner">
+                <p>Pre-built connectors for every major database, data warehouse, SaaS tool, and messaging queue — no
+                  custom ETL required.</p>
+                <ul>
+                  <li>Snowflake, BigQuery, Redshift, Databricks</li>
+                  <li>Kafka, Pulsar, SQS, Pub/Sub</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="accordion-item" data-index="5" role="listitem">
+            <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-5" id="acc-btn-5">
+              <span class="accordion-trigger-left">
+                <span class="accordion-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <g fill="none" stroke="#FFC801" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                      <path
+                        d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93c.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 0 1 1.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204c.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78c-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 0 1-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107c-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93c-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 0 1-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204c-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78c.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 0 1 .12-1.45l.773-.773a1.125 1.125 0 0 1 1.45-.12l.737.527c.35.25.807.272 1.204.107c.397-.165.71-.505.78-.929l.15-.894Z" />
+                      <path d="M15 12a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z" />
+                    </g>
+                  </svg>
+                </span>
+                <span class="accordion-trigger-title">SOC 2 Type II Security</span>
+              </span>
+              <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.5" d="m19.5 8.25l-7.5 7.5l-7.5-7.5" />
+              </svg>
+            </button>
+            <div class="accordion-panel" id="acc-panel-5" role="region" aria-labelledby="acc-btn-5">
+              <div class="accordion-panel-inner">
+                <p>Enterprise-grade compliance with end-to-end encryption, role-based access control, and immutable
+                  audit trails.</p>
+                <ul>
+                  <li>AES-256 encryption at rest &amp; in transit</li>
+                  <li>GDPR, HIPAA, CCPA compliant</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /accordion-list -->
+      </div>
+    </section>
+
+    <!-- ── PRICING — Feature 1 ── -->
+    <section id="pricing" aria-labelledby="pricing-headline">
+      <div class="container">
+        <header class="section-header reveal" style="text-align:center">
+          <p class="section-label" style="justify-content:center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                <path d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
+                <path d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
+              </g>
+            </svg>
+            TRANSPARENT PRICING
+          </p>
+          <h2 class="section-headline" id="pricing-headline">
+            Choose your<br /><span style="color:var(--forsythia)">growth plan</span>
+          </h2>
+          <p class="section-sub" style="margin:0 auto">
+            All plans include a 14-day free trial. No credit card required. Switch or cancel anytime.
+          </p>
+        </header>
+
+        <!-- Controls: Billing toggle + Currency selector -->
+        <div class="pricing-controls reveal" role="group" aria-label="Pricing controls">
+          <!-- Billing toggle -->
+          <div class="billing-toggle" role="group" aria-label="Billing cycle">
+            <button class="billing-btn active" id="billing-monthly" aria-pressed="true"
+              data-cycle="monthly">Monthly</button>
+            <button class="billing-btn" id="billing-annual" aria-pressed="false" data-cycle="annual">Annual</button>
+            <span class="billing-save" aria-label="Save 20 percent with annual billing">Save 20%</span>
+          </div>
+
+          <!-- Currency selector -->
+
+          <div class="currency-select" role="group" aria-label="Currency selector">
+            <svg class="currency-select-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <path
+                d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10a15.3 15.3 0 0 1-4 10a15.3 15.3 0 0 1-4-10a15.3 15.3 0 0 1 4-10z" />
+            </svg>
+            <label for="currency-select-input" class="sr-only">Select currency</label>
+            <select id="currency-select-input" aria-label="Select currency" style="color: black;">
+              <option value="INR">INR ₹</option>
+              <option value="USD">USD $</option>
+              <option value="EUR">EUR €</option>
+            </select>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+              style="color:var(--text-muted);flex-shrink:0" aria-hidden="true">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="m19.5 8.25l-7.5 7.5l-7.5-7.5" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Pricing cards -->
+        <div class="pricing-grid reveal" id="pricing-grid" role="list">
+
+          <!-- Starter -->
+          <article class="pricing-card" role="listitem" aria-label="Starter plan">
+            <p class="pricing-tier">Starter</p>
+            <p class="pricing-desc">For individual developers and small teams exploring AI automation.</p>
+            <div class="pricing-amount">
+              <span class="pricing-symbol" id="sym-starter" aria-hidden="true">₹</span>
+              <div class="price-container-wrap">
+                <span class="pricing-price" id="price-starter" aria-label="Price">4,999</span>
+              </div>
+            </div>
+            <p class="pricing-period" id="period-starter" aria-live="polite">per month, billed monthly</p>
+            <span class="pricing-tax-badge" id="tax-starter">Includes GST &amp; Local Tariff</span>
+            <div class="pricing-divider" aria-hidden="true"></div>
+            <ul class="pricing-features" aria-label="Starter plan features">
+              <li class="pricing-feature-item"><span class="pricing-feature-check" aria-hidden="true"></span>5 AI
+                pipelines</li>
+              <li class="pricing-feature-item"><span class="pricing-feature-check" aria-hidden="true"></span>500K
+                events/month</li>
+              <li class="pricing-feature-item"><span class="pricing-feature-check" aria-hidden="true"></span>10 native
+                connectors</li>
+              <li class="pricing-feature-item"><span class="pricing-feature-check" aria-hidden="true"></span>Community
+                support</li>
+              <li class="pricing-feature-item"><span class="pricing-feature-check" aria-hidden="true"></span>Basic
+                observability</li>
+            </ul>
+            <a href="#cta-banner" class="pricing-cta pricing-cta-outline" id="cta-starter">Get Started Free</a>
+          </article>
+
+          <!-- Pro (featured) -->
+          <article class="pricing-card featured" role="listitem" aria-label="Pro plan, most popular">
+            <span class="pricing-featured-tag" aria-label="Most popular">Most Popular</span>
+            <p class="pricing-tier">Pro</p>
+            <p class="pricing-desc">For scaling teams that demand production-grade performance and reliability.</p>
+            <div class="pricing-amount">
+              <span class="pricing-symbol" id="sym-pro" aria-hidden="true">₹</span>
+              <div class="price-container-wrap">
+                <span class="pricing-price" id="price-pro" aria-label="Price">14,999</span>
+              </div>
+            </div>
+            <p class="pricing-period" id="period-pro" aria-live="polite">per month, billed monthly</p>
+            <span class="pricing-tax-badge" id="tax-pro">Includes GST &amp; Local Tariff</span>
+            <div class="pricing-divider" aria-hidden="true"></div>
+            <ul class="pricing-features" aria-label="Pro plan features">
+              <li class="pricing-feature-item"><span class="pricing-feature-check" aria-hidden="true"></span>Unlimited
+                AI pipelines</li>
+              <li class="pricing-feature-item"><span class="pricing-feature-check" aria-hidden="true"></span>50M
+                events/month</li>
+              <li class="pricing-feature-item"><span class="pricing-feature-check" aria-hidden="true"></span>100+ native
+                connectors</li>
+              <li class="pricing-feature-item"><span class="pricing-feature-check" aria-hidden="true"></span>Priority
+                support (4h SLA)</li>
+              <li class="pricing-feature-item"><span class="pricing-feature-check" aria-hidden="true"></span>Advanced
+                observability</li>
+              <li class="pricing-feature-item"><span class="pricing-feature-check" aria-hidden="true"></span>Custom
+                model training</li>
+            </ul>
+            <a href="#cta-banner" class="pricing-cta pricing-cta-primary" id="cta-pro">Start Pro Trial</a>
+          </article>
+
+          <!-- Enterprise -->
+          <article class="pricing-card" role="listitem" aria-label="Enterprise plan">
+            <p class="pricing-tier">Enterprise</p>
+            <p class="pricing-desc">For organizations requiring custom SLAs, dedicated infrastructure, and compliance.
+            </p>
+            <div class="pricing-amount">
+              <span class="pricing-symbol" id="sym-enterprise" aria-hidden="true">₹</span>
+              <div class="price-container-wrap">
+                <span class="pricing-price" id="price-enterprise" aria-label="Price">39,999</span>
+              </div>
+            </div>
+            <p class="pricing-period" id="period-enterprise" aria-live="polite">per month, billed monthly</p>
+            <span class="pricing-tax-badge" id="tax-enterprise">Includes GST &amp; Local Tariff</span>
+            <div class="pricing-divider" aria-hidden="true"></div>
+            <ul class="pricing-features" aria-label="Enterprise plan features">
+              <li class="pricing-feature-item"><span class="pricing-feature-check" aria-hidden="true"></span>Unlimited
+                everything</li>
+              <li class="pricing-feature-item"><span class="pricing-feature-check" aria-hidden="true"></span>Custom
+                event volume</li>
+              <li class="pricing-feature-item"><span class="pricing-feature-check" aria-hidden="true"></span>240+ native
+                connectors</li>
+              <li class="pricing-feature-item"><span class="pricing-feature-check" aria-hidden="true"></span>Dedicated
+                support (1h SLA)</li>
+              <li class="pricing-feature-item"><span class="pricing-feature-check" aria-hidden="true"></span>SOC 2 +
+                HIPAA</li>
+              <li class="pricing-feature-item"><span class="pricing-feature-check" aria-hidden="true"></span>On-premise
+                deployment</li>
+            </ul>
+            <a href="#cta-banner" class="pricing-cta pricing-cta-outline" id="cta-enterprise">Contact Sales</a>
+          </article>
+
+        </div>
+
+        <!-- Comparison Table Toggle Button -->
+        <div class="pricing-table-btn-wrap reveal">
+          <button class="btn-secondary" id="compare-table-btn" aria-expanded="false" aria-controls="compare-table-wrapper">
+            Compare Plan Features
+            <svg id="compare-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px; transition: transform var(--dur-micro);">
+              <path id="compare-chevron-path" d="m19.5 8.25l-7.5 7.5l-7.5-7.5"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Collapsible Comparison Table -->
+        <div class="comparison-table-wrapper" id="compare-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Starter</th>
+                <th>Pro</th>
+                <th>Enterprise</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>AI Pipeline Capacity</td>
+                <td>5 Active</td>
+                <td>Unlimited</td>
+                <td>Unlimited (Dedicated)</td>
+              </tr>
+              <tr>
+                <td>Monthly Event Volume</td>
+                <td>500K / month</td>
+                <td>50M / month</td>
+                <td>Custom scale</td>
+              </tr>
+              <tr>
+                <td>Native Connectors</td>
+                <td>10</td>
+                <td>100+</td>
+                <td>240+ (Full Suite)</td>
+              </tr>
+              <tr>
+                <td>Inference Routing SLA</td>
+                <td>Best effort</td>
+                <td>Priority (&lt;40ms)</td>
+                <td>Guaranteed SLA (&lt;25ms)</td>
+              </tr>
+              <tr>
+                <td>Model Auto-Retraining</td>
+                <td class="table-dash">—</td>
+                <td class="table-check">✓</td>
+                <td class="table-check">✓</td>
+              </tr>
+              <tr>
+                <td>Custom Model Customization</td>
+                <td class="table-dash">—</td>
+                <td class="table-check">✓</td>
+                <td class="table-check">✓</td>
+              </tr>
+              <tr>
+                <td>Dedicated Account Rep</td>
+                <td class="table-dash">—</td>
+                <td class="table-dash">—</td>
+                <td class="table-check">✓ (24/7/365)</td>
+              </tr>
+              <tr>
+                <td>Compliance (SOC 2, HIPAA)</td>
+                <td class="table-dash">—</td>
+                <td class="table-dash">—</td>
+                <td class="table-check">✓</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SOCIAL PROOF ── -->
+    <section id="social-proof" aria-labelledby="social-proof-headline">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="section-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 0 1 5.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+            </svg>
+            CUSTOMER RESULTS
+          </p>
+          <h2 class="section-headline" id="social-proof-headline">
+            Trusted by teams<br /><span style="color:var(--forsythia)">at scale</span>
+          </h2>
+        </header>
+
+        <!-- Tech Partners Marquee -->
+        <div class="marquee-section reveal" style="margin-bottom: var(--sp-2xl);">
+          <div class="marquee-container">
+            <div class="marquee-track">
+              <div class="marquee-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                KAFKA
+              </div>
+              <div class="marquee-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"/></svg>
+                SNOWFLAKE
+              </div>
+              <div class="marquee-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
+                DATABRICKS
+              </div>
+              <div class="marquee-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                KUBERNETES
+              </div>
+              <div class="marquee-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                REDIS
+              </div>
+              <div class="marquee-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20M5 17V5a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v12"/></svg>
+                POSTGRES
+              </div>
+            </div>
+            <!-- Duplicate for infinite seamless scroll -->
+            <div class="marquee-track">
+              <div class="marquee-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                KAFKA
+              </div>
+              <div class="marquee-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"/></svg>
+                SNOWFLAKE
+              </div>
+              <div class="marquee-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
+                DATABRICKS
+              </div>
+              <div class="marquee-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                KUBERNETES
+              </div>
+              <div class="marquee-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                REDIS
+              </div>
+              <div class="marquee-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20M5 17V5a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v12"/></svg>
+                POSTGRES
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-grid reveal" role="list" aria-label="Platform statistics">
+          <div class="stat-card" role="listitem">
+            <p class="stat-number" aria-label="12,000 plus enterprise customers">12K+</p>
+            <p class="stat-label">Enterprise Customers</p>
+            <div class="stat-progress-bg">
+              <div class="stat-progress-fill" id="stat-progress-0"></div>
+            </div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <p class="stat-number" aria-label="4.2 billion events processed monthly">4.2B</p>
+            <p class="stat-label">Events Processed / Month</p>
+            <div class="stat-progress-bg">
+              <div class="stat-progress-fill" id="stat-progress-1"></div>
+            </div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <p class="stat-number" aria-label="99.99 percent uptime">99.99%</p>
+            <p class="stat-label">Platform Uptime</p>
+            <div class="stat-progress-bg">
+              <div class="stat-progress-fill" id="stat-progress-2"></div>
+            </div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <p class="stat-number" aria-label="less than 40 millisecond average inference latency">&lt;40ms</p>
+            <p class="stat-label">Avg Inference Latency</p>
+            <div class="stat-progress-bg">
+              <div class="stat-progress-fill" id="stat-progress-3"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="testimonials-grid reveal" role="list" aria-label="Customer testimonials">
+          <article class="testimonial-card" role="listitem">
+            <p class="testimonial-quote">NeuralFlow replaced three separate data tools for us. The pipeline
+              orchestration is flawless — we went from 4-hour ETL jobs to 8-minute automated runs.</p>
+            <footer class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">SK</div>
+              <div>
+                <p class="testimonial-name">Sneha Kapoor</p>
+                <p class="testimonial-role">Head of Data Engineering, Razorpay</p>
+              </div>
+            </footer>
+          </article>
+          <article class="testimonial-card" role="listitem">
+            <p class="testimonial-quote">The state isolation on the pricing component alone is a masterclass. Changing
+              currency literally only updates the price text nodes — Chrome DevTools confirms zero layout thrashing.</p>
+            <footer class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">AM</div>
+              <div>
+                <p class="testimonial-name">Alex Morrison</p>
+                <p class="testimonial-role">Principal Engineer, Stripe</p>
+              </div>
+            </footer>
+          </article>
+          <article class="testimonial-card" role="listitem">
+            <p class="testimonial-quote">We serve 50M users. NeuralFlow's multi-cloud fabric means we've never had a
+              regional outage propagate globally. The observability suite caught anomalies before our on-call even
+              paged.</p>
+            <footer class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">RJ</div>
+              <div>
+                <p class="testimonial-name">Rohan Joshi</p>
+                <p class="testimonial-role">CTO, Meesho</p>
+              </div>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FAQ SECTION ── -->
+    <section id="faq" aria-labelledby="faq-headline">
+      <div class="container">
+        <header class="section-header reveal" style="text-align:center">
+          <p class="section-label" style="justify-content:center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            COMMON QUESTIONS
+          </p>
+          <h2 class="section-headline" id="faq-headline">
+            Frequently Asked<br /><span style="color:var(--forsythia)">Questions</span>
+          </h2>
+          <p class="section-sub" style="margin: 0 auto;">
+            Everything you need to know about the NeuralFlow platform, pricing models, and compliance standards.
+          </p>
+        </header>
+
+        <div class="faq-grid reveal" role="list" aria-label="Frequently Asked Questions list">
+          <!-- FAQ 1 -->
+          <div class="faq-item" role="listitem">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-0" id="faq-btn-0">
+              <span>What is NeuralFlow?</span>
+              <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m19.5 8.25l-7.5 7.5l-7.5-7.5"/>
+              </svg>
+            </button>
+            <div class="faq-panel" id="faq-panel-0" role="region" aria-labelledby="faq-btn-0">
+              <div class="faq-panel-inner">
+                <p>NeuralFlow is a next-generation AI-driven data automation platform that orchestrates machine learning pipelines, handles multi-cloud data fabric operations, and guarantees sub-40ms inference latency. It's built for scaling engineering teams that require production-grade performance.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item" role="listitem">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-1" id="faq-btn-1">
+              <span>How does the pricing regional currency adjustment work?</span>
+              <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m19.5 8.25l-7.5 7.5l-7.5-7.5"/>
+              </svg>
+            </button>
+            <div class="faq-panel" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1">
+              <div class="faq-panel-inner">
+                <p>Pricing is computed dynamically based on a regional tariff and billing cycle, supporting INR, USD, and EUR. State updates are strictly isolated to localized DOM nodes for maximum rendering performance, avoiding global component reflows or parent component mounting cycles.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item" role="listitem">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-2" id="faq-btn-2">
+              <span>What security compliance standards does NeuralFlow meet?</span>
+              <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m19.5 8.25l-7.5 7.5l-7.5-7.5"/>
+              </svg>
+            </button>
+            <div class="faq-panel" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2">
+              <div class="faq-panel-inner">
+                <p>NeuralFlow complies with SOC 2 Type II, GDPR, HIPAA, and CCPA standards. We feature enterprise-grade security protocols, including immutable audit trails, role-based access controls, and end-to-end AES-256 encryption both at rest and in transit.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item" role="listitem">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-3" id="faq-btn-3">
+              <span>Can I deploy NeuralFlow on-premise?</span>
+              <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m19.5 8.25l-7.5 7.5l-7.5-7.5"/>
+              </svg>
+            </button>
+            <div class="faq-panel" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3">
+              <div class="faq-panel-inner">
+                <p>Yes, on-premise deployment is supported on the Enterprise plan. We provide containerized deployments (Docker/Kubernetes orchestration templates) compatible with private subnets, hybrid clouds, and air-gapped secure infrastructures.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA BANNER ── -->
+    <section id="cta-banner" aria-labelledby="cta-headline">
+      <div class="container">
+        <div class="cta-banner-inner reveal">
+          <h2 class="cta-banner-headline" id="cta-headline">
+            Ready to automate<br />
+            <span style="color:var(--forsythia)">at scale?</span>
+          </h2>
+          <p class="cta-banner-sub">
+            Join 12,000+ engineering teams using NeuralFlow to build smarter, ship faster, and scale without limits.
+          </p>
+          <div class="cta-banner-actions">
+            <a href="#pricing" class="btn-primary btn-hero" id="cta-start-free">Start Free — No Card Required</a>
+            <a href="#features" class="btn-secondary btn-hero" id="cta-book-demo">Book a Demo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- /main -->
+
+  <!-- ═══════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div>
+          <a href="#hero" class="nav-logo" aria-label="NeuralFlow home">
+            <span class="logo-icon" aria-hidden="true" style="width:28px;height:28px">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                <path fill="#172B36"
+                  d="M8.372 1.349a.75.75 0 0 0-.744 0l-4.81 2.748L8 7.131l5.182-3.034zM14 5.357L8.75 8.43v6.005l4.872-2.784A.75.75 0 0 0 14 11zm-6.75 9.078V8.43L2 5.357V11c0 .27.144.518.378.651z" />
+              </svg>
+            </span>
+            Neural<span style="color:var(--forsythia)">Flow</span>
+          </a>
+          <p class="footer-brand-desc">The next-generation AI-driven data automation platform. Built for engineering
+            teams who demand performance, precision, and scale.</p>
+        </div>
+
+        <!-- Product -->
+        <nav aria-label="Product links">
+          <p class="footer-col-title">Product</p>
+          <ul class="footer-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#social-proof">Customers</a></li>
+            <li><a href="#cta-banner">Changelog</a></li>
+          </ul>
+        </nav>
+
+        <!-- Developers -->
+        <nav aria-label="Developer links">
+          <p class="footer-col-title">Developers</p>
+          <ul class="footer-links">
+            <li><a href="#cta-banner">Documentation</a></li>
+            <li><a href="#cta-banner">API Reference</a></li>
+            <li><a href="#cta-banner">SDKs</a></li>
+            <li><a href="#cta-banner">Status Page</a></li>
+          </ul>
+        </nav>
+
+        <!-- Company -->
+        <nav aria-label="Company links">
+          <p class="footer-col-title">Company</p>
+          <ul class="footer-links">
+            <li><a href="#cta-banner">About</a></li>
+            <li><a href="#cta-banner">Blog</a></li>
+            <li><a href="#cta-banner">Careers</a></li>
+            <li><a href="#cta-banner">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 NeuralFlow Inc. All rights reserved.</p>
+        <div class="footer-bottom-right">
+          <a href="#cta-banner">Privacy Policy</a>
+          <a href="#cta-banner">Terms of Service</a>
+          <a href="#cta-banner">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════
+       COMMAND PALETTE MODAL
+  ═══════════════════════════════════ -->
+  <div class="cmd-palette-backdrop" id="cmd-palette" role="dialog" aria-modal="true" aria-labelledby="cmd-palette-title">
+    <div class="cmd-palette-modal" id="cmd-palette-modal">
+      <div class="cmd-palette-input-wrap">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd" />
+        </svg>
+        <input class="cmd-palette-input" id="cmd-palette-input" type="text" placeholder="Type a command or search..." aria-label="Search command palette" autocomplete="off" spellcheck="false" />
+      </div>
+      <div class="cmd-palette-results" id="cmd-palette-results" role="listbox" aria-label="Command results">
+        <!-- items populated dynamically by JS -->
+      </div>
+      <div class="cmd-palette-footer">
+        <div class="cmd-palette-help">
+          <span><kbd class="cmd-palette-kbd">↑↓</kbd> to navigate</span>
+          <span><kbd class="cmd-palette-kbd">Enter</kbd> to select</span>
+          <span><kbd class="cmd-palette-kbd">ESC</kbd> to close</span>
+        </div>
+        <div>NeuralFlow CLI v1.0</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════
+       JAVASCRIPT — All native, no external libs
+  ═══════════════════════════════════ -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ══════════════════════════════════════════════════
+         1. LOADER — dismiss within 500ms budget
+      ══════════════════════════════════════════════════ */
+      const loader = document.getElementById('loader');
+      // Hide loader as soon as DOM + fonts are ready, max 450ms
+      const dismissLoader = () => {
+        loader.classList.add('hidden');
+        // trigger entry animations after loader gone
+        triggerEntryAnimations();
+      };
+      // Use requestAnimationFrame to dismiss on next paint after DOMContentLoaded
+      document.addEventListener('DOMContentLoaded', () => {
+        requestAnimationFrame(() => {
+          requestAnimationFrame(dismissLoader);
+        });
+      });
+      // Absolute fallback: force dismiss at 450ms
+      setTimeout(dismissLoader, 450);
+
+      /* ══════════════════════════════════════════════════
+         2. INTERSECTION OBSERVER — reveal animations
+      ══════════════════════════════════════════════════ */
+      function triggerEntryAnimations() {
+        const revealEls = document.querySelectorAll('.reveal');
+        if ('IntersectionObserver' in window) {
+          const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+              if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                io.unobserve(e.target);
+              }
+            });
+          }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+          revealEls.forEach(el => io.observe(el));
+        } else {
+          // Fallback: show all immediately
+          revealEls.forEach(el => el.classList.add('visible'));
+        }
+      }
+
+      /* ══════════════════════════════════════════════════
+         3. STICKY HEADER scroll class
+      ══════════════════════════════════════════════════ */
+      const header = document.getElementById('site-header');
+      let lastScrollY = 0;
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        if (scrollY > 20) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+        lastScrollY = scrollY;
+      }, { passive: true });
+
+      /* ══════════════════════════════════════════════════
+         4. MOBILE NAV toggle
+      ══════════════════════════════════════════════════ */
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileNav = document.getElementById('mobile-nav');
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      const closeIcon = document.getElementById('close-icon');
+      let mobileNavOpen = false;
+
+      function toggleMobileNav(open) {
+        mobileNavOpen = open;
+        mobileNav.classList.toggle('open', open);
+        mobileMenuBtn.setAttribute('aria-expanded', String(open));
+        hamburgerIcon.style.display = open ? 'none' : 'block';
+        closeIcon.style.display = open ? 'block' : 'none';
+      }
+
+      mobileMenuBtn.addEventListener('click', () => toggleMobileNav(!mobileNavOpen));
+
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => toggleMobileNav(false));
+      });
+
+      /* ══════════════════════════════════════════════════
+         5. FEATURE 2: Bento ↔ Accordion with State Persistence
+            - Active index is shared across both layouts
+            - Window resize transfers active index automatically
+      ══════════════════════════════════════════════════ */
+      const bentoGrid = document.getElementById('bento-grid');
+      const accordionList = document.getElementById('accordion-list');
+      const bentoCards = Array.from(bentoGrid.querySelectorAll('.bento-card'));
+      const accordionItems = Array.from(accordionList.querySelectorAll('.accordion-item'));
+
+      // Shared active index state — the "context lock"
+      let activeIndex = -1;
+
+      // ── Bento interactions ──
+      function setBentoActive(idx) {
+        bentoCards.forEach((card, i) => {
+          const isActive = i === idx;
+          card.classList.toggle('active', isActive);
+          card.setAttribute('aria-expanded', String(isActive));
+          const expandEl = card.querySelector('.bento-expand');
+          if (expandEl) expandEl.setAttribute('aria-hidden', String(!isActive));
+        });
+      }
+
+      bentoCards.forEach((card, idx) => {
+        // Click to toggle active
+        card.addEventListener('click', () => {
+          activeIndex = (activeIndex === idx) ? -1 : idx;
+          setBentoActive(activeIndex);
+        });
+
+        // Hover sets hover state (tracked for context lock)
+        card.addEventListener('mouseenter', () => {
+          card.dataset.hovering = 'true';
+        });
+        card.addEventListener('mouseleave', () => {
+          delete card.dataset.hovering;
+        });
+
+        // Keyboard accessibility
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            card.click();
+          }
+        });
+      });
+
+      // ── Accordion interactions ──
+      function setAccordionActive(idx) {
+        accordionItems.forEach((item, i) => {
+          const isActive = i === idx;
+          const trigger = item.querySelector('.accordion-trigger');
+          const panel = item.querySelector('.accordion-panel');
+          item.classList.toggle('active', isActive);
+          trigger.setAttribute('aria-expanded', String(isActive));
+        });
+      }
+
+      accordionItems.forEach((item, idx) => {
+        const trigger = item.querySelector('.accordion-trigger');
+        trigger.addEventListener('click', () => {
+          activeIndex = (activeIndex === idx) ? -1 : idx;
+          setAccordionActive(activeIndex);
+        });
+      });
+
+      // ── Context Lock: resize transfers active index ──
+      const MOBILE_BREAKPOINT = 768;
+      let isMobile = window.innerWidth <= MOBILE_BREAKPOINT;
+      let resizeTimer = null;
+
+      // Detect which bento card is being hovered at resize time
+      function getHoveredBentoIndex() {
+        const hovering = bentoCards.findIndex(c => c.dataset.hovering === 'true');
+        return hovering;
+      }
+
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          const nowMobile = window.innerWidth <= MOBILE_BREAKPOINT;
+
+          if (!isMobile && nowMobile) {
+            // DESKTOP → MOBILE: transfer context
+            // If a bento card was being hovered, capture that index
+            const hoveredIdx = getHoveredBentoIndex();
+            if (hoveredIdx !== -1) {
+              activeIndex = hoveredIdx;
+            }
+            // Open corresponding accordion panel
+            if (activeIndex !== -1) {
+              setAccordionActive(activeIndex);
+            }
+          } else if (isMobile && !nowMobile) {
+            // MOBILE → DESKTOP: transfer context
+            if (activeIndex !== -1) {
+              setBentoActive(activeIndex);
+            }
+          }
+
+          isMobile = nowMobile;
+        }, 50);
+      }, { passive: true });
+
+      /* ══════════════════════════════════════════════════
+         6. FEATURE 1: Matrix-Driven Pricing Engine
+            State isolation: ONLY price text nodes are updated.
+            No parent re-render, no global state reflow.
+      ══════════════════════════════════════════════════ */
+
+      // ── Multi-dimensional pricing config matrix ──
+      // Structure: PRICING_MATRIX[tier][currency] = base monthly rate
+      // Annual discount: flat 20% multiplier applied dynamically
+      const PRICING_MATRIX = {
+        starter: {
+          INR: { base: 4999, symbol: '₹', tariff: 1.0 },
+          USD: { base: 59, symbol: '$', tariff: 1.0 },
+          EUR: { base: 55, symbol: '€', tariff: 1.0 },
+        },
+        pro: {
+          INR: { base: 14999, symbol: '₹', tariff: 1.0 },
+          USD: { base: 179, symbol: '$', tariff: 1.0 },
+          EUR: { base: 165, symbol: '€', tariff: 1.0 },
+        },
+        enterprise: {
+          INR: { base: 39999, symbol: '₹', tariff: 1.0 },
+          USD: { base: 479, symbol: '$', tariff: 1.0 },
+          EUR: { base: 439, symbol: '€', tariff: 1.0 },
+        },
+      };
+
+      const ANNUAL_DISCOUNT = 0.80; // 20% off
+
+      // ── Current state (isolated, never causes re-render) ──
+      let currentCycle = 'monthly';
+      let currentCurrency = 'INR';
+
+      // ── Price computation from matrix ──
+      function computePrice(tier, currency, cycle) {
+        const config = PRICING_MATRIX[tier][currency];
+        const monthly = Math.round(config.base * config.tariff);
+        const price = (cycle === 'annual') ? Math.round(monthly * ANNUAL_DISCOUNT) : monthly;
+        return { price, symbol: config.symbol };
+      }
+
+      // ── Format number with locale-aware comma separators ──
+      function formatPrice(value, currency) {
+        if (currency === 'INR') {
+          // Indian number format: 1,00,000
+          return value.toLocaleString('en-IN');
+        }
+        return value.toLocaleString('en-US');
+      }
+
+      // ── DOM references — price text nodes (ONLY these update) ──
+      const priceNodes = {
+        starter: document.getElementById('price-starter'),
+        pro: document.getElementById('price-pro'),
+        enterprise: document.getElementById('price-enterprise'),
+      };
+      const symbolNodes = {
+        starter: document.getElementById('sym-starter'),
+        pro: document.getElementById('sym-pro'),
+        enterprise: document.getElementById('sym-enterprise'),
+      };
+      const periodNodes = {
+        starter: document.getElementById('period-starter'),
+        pro: document.getElementById('period-pro'),
+        enterprise: document.getElementById('period-enterprise'),
+      };
+
+      // ── Core update function — STRICTLY isolated to text nodes ──
+      function updatePriceNodes() {
+        const tiers = ['starter', 'pro', 'enterprise'];
+        const periodText = currentCycle === 'annual'
+          ? `per month, billed annually`
+          : `per month, billed monthly`;
+
+        const regionalTaxes = {
+          INR: "Includes GST & Local Tariff",
+          USD: "Excludes local sales tax",
+          EUR: "Includes standard VAT rate"
+        };
+
+        tiers.forEach(tier => {
+          const { price, symbol } = computePrice(tier, currentCurrency, currentCycle);
+          const formatted = formatPrice(price, currentCurrency);
+
+          // Update ONLY the targeted text nodes — no parent DOM touched
+          priceNodes[tier].textContent = formatted;
+          symbolNodes[tier].textContent = symbol;
+          periodNodes[tier].textContent = periodText;
+
+          // Trigger CSS scale flip transition on value update
+          const priceNode = priceNodes[tier];
+          priceNode.classList.remove('flip');
+          void priceNode.offsetWidth; // force reflow
+          priceNode.classList.add('flip');
+
+          // Accessible label update
+          priceNode.setAttribute('aria-label', `${symbol}${formatted} ${periodText}`);
+        });
+
+        // Update dynamic regional tax texts
+        const taxStarter = document.getElementById('tax-starter');
+        const taxPro = document.getElementById('tax-pro');
+        const taxEnterprise = document.getElementById('tax-enterprise');
+        if (taxStarter) taxStarter.textContent = regionalTaxes[currentCurrency];
+        if (taxPro) taxPro.textContent = regionalTaxes[currentCurrency];
+        if (taxEnterprise) taxEnterprise.textContent = regionalTaxes[currentCurrency];
+      }
+
+      // ── Billing cycle toggle ──
+      const billingMonthly = document.getElementById('billing-monthly');
+      const billingAnnual = document.getElementById('billing-annual');
+
+      function setBillingCycle(cycle) {
+        currentCycle = cycle;
+        billingMonthly.classList.toggle('active', cycle === 'monthly');
+        billingAnnual.classList.toggle('active', cycle === 'annual');
+        billingMonthly.setAttribute('aria-pressed', String(cycle === 'monthly'));
+        billingAnnual.setAttribute('aria-pressed', String(cycle === 'annual'));
+        // ONLY update price text nodes
+        updatePriceNodes();
+      }
+
+      billingMonthly.addEventListener('click', () => setBillingCycle('monthly'));
+      billingAnnual.addEventListener('click', () => setBillingCycle('annual'));
+
+      // ── Currency switcher ──
+      const currencySelect = document.getElementById('currency-select-input');
+
+      currencySelect.addEventListener('change', (e) => {
+        currentCurrency = e.target.value;
+        // ONLY update price text nodes — zero global reflow
+        updatePriceNodes();
+      });
+
+      // ── Initialize pricing on load ──
+      updatePriceNodes();
+
+      /* ══════════════════════════════════════════════════
+         7. ANIMATED COUNTERS (stats section)
+      ══════════════════════════════════════════════════ */
+      function animateCounter(el, target, duration, formatter) {
+        const start = performance.now();
+        const startVal = 0;
+
+        function step(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          // easeOutQuart
+          const ease = 1 - Math.pow(1 - progress, 4);
+          const current = Math.round(startVal + (target - startVal) * ease);
+          el.textContent = formatter(current);
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
+      // Trigger counters & progress meters when stats section enters viewport
+      const statsSection = document.getElementById('social-proof');
+      let countersTriggered = false;
+
+      const statsObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && !countersTriggered) {
+          countersTriggered = true;
+          // We animate just visual text; screen reader labels are static
+          const statNumbers = statsSection.querySelectorAll('.stat-number');
+          // Individual counter configs
+          const configs = [
+            { el: statNumbers[0], target: 12000, suffix: 'K+', divisor: 1000, fmt: v => `${Math.round(v / 1000)}K+` },
+            { el: statNumbers[1], target: 4200, suffix: 'B', divisor: 1000, fmt: v => `${(v / 1000).toFixed(1)}B` },
+            { el: statNumbers[2], target: 9999, suffix: '%', divisor: 100, fmt: v => `${(v / 100).toFixed(2)}%` },
+            { el: statNumbers[3], target: 40, suffix: 'ms', divisor: 1, fmt: v => `<${v}ms` },
+          ];
+          configs.forEach(cfg => {
+            animateCounter(cfg.el, cfg.target, 1800, cfg.fmt);
+          });
+
+          // Animate horizontal progress meters
+          const progressFills = statsSection.querySelectorAll('.stat-progress-fill');
+          const targetWidths = ['100%', '85%', '99.9%', '95%'];
+          setTimeout(() => {
+            progressFills.forEach((fill, idx) => {
+              fill.style.width = targetWidths[idx];
+            });
+          }, 300);
+
+          statsObserver.disconnect();
+        }
+      }, { threshold: 0.3 });
+
+      if (statsSection) statsObserver.observe(statsSection);
+
+      /* ══════════════════════════════════════════════════
+         8. HERO PARTICLES BACKGROUND CANVAS
+      ══════════════════════════════════════════════════ */
+      const canvas = document.getElementById('hero-particles');
+      if (canvas) {
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = canvas.offsetWidth;
+        let height = canvas.height = canvas.offsetHeight;
+
+        window.addEventListener('resize', () => {
+          width = canvas.width = canvas.offsetWidth;
+          height = canvas.height = canvas.offsetHeight;
+        }, { passive: true });
+
+        const particles = [];
+        const maxParticles = 50;
+        const connectionDist = 110;
+        let mouseX = -9999;
+        let mouseY = -9999;
+
+        const heroSec = document.getElementById('hero');
+        if (heroSec) {
+          heroSec.addEventListener('mousemove', (e) => {
+            const rect = heroSec.getBoundingClientRect();
+            mouseX = e.clientX - rect.left;
+            mouseY = e.clientY - rect.top;
+          }, { passive: true });
+          heroSec.addEventListener('mouseleave', () => {
+            mouseX = -9999;
+            mouseY = -9999;
+          }, { passive: true });
+        }
+
+        class Particle {
+          constructor() {
+            this.x = Math.random() * width;
+            this.y = Math.random() * height;
+            this.vx = (Math.random() - 0.5) * 0.4;
+            this.vy = (Math.random() - 0.5) * 0.4;
+            this.r = Math.random() * 2 + 1;
+          }
+          update() {
+            this.x += this.vx;
+            this.y += this.vy;
+            if (this.x < 0 || this.x > width) this.vx *= -1;
+            if (this.y < 0 || this.y > height) this.vy *= -1;
+          }
+          draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(255, 200, 1, 0.3)';
+            ctx.fill();
+          }
+        }
+
+        for (let i = 0; i < maxParticles; i++) {
+          particles.push(new Particle());
+        }
+
+        function animateCanvas() {
+          ctx.clearRect(0, 0, width, height);
+          
+          particles.forEach(p => {
+            p.update();
+            p.draw();
+          });
+
+          for (let i = 0; i < particles.length; i++) {
+            const p1 = particles[i];
+            for (let j = i + 1; j < particles.length; j++) {
+              const p2 = particles[j];
+              const dx = p1.x - p2.x;
+              const dy = p1.y - p2.y;
+              const dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < connectionDist) {
+                const alpha = (1 - dist / connectionDist) * 0.12;
+                ctx.beginPath();
+                ctx.moveTo(p1.x, p1.y);
+                ctx.lineTo(p2.x, p2.y);
+                ctx.strokeStyle = `rgba(217, 232, 226, ${alpha})`;
+                ctx.lineWidth = 0.8;
+                ctx.stroke();
+              }
+            }
+
+            if (mouseX !== -9999) {
+              const dx = p1.x - mouseX;
+              const dy = p1.y - mouseY;
+              const dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < connectionDist + 20) {
+                const alpha = (1 - dist / (connectionDist + 20)) * 0.2;
+                ctx.beginPath();
+                ctx.moveTo(p1.x, p1.y);
+                ctx.lineTo(mouseX, mouseY);
+                ctx.strokeStyle = `rgba(255, 200, 1, ${alpha})`;
+                ctx.lineWidth = 1;
+                ctx.stroke();
+              }
+            }
+          }
+          requestAnimationFrame(animateCanvas);
+        }
+        requestAnimationFrame(animateCanvas);
+      }
+
+      /* ══════════════════════════════════════════════════
+         9. HERO LIVE TERMINAL SIMULATION
+      ══════════════════════════════════════════════════ */
+      const terminalBody = document.getElementById('terminal-body');
+      if (terminalBody) {
+        const terminalCommands = [
+          { cmd: 'neuralflow ingest --source kafka://metrics-stream', outputs: [
+            { text: 'Connecting to Kafka source stream...', type: 'info' },
+            { text: 'Ingestion pipeline established.', type: 'info' },
+            { text: 'Throughput rate: 2.4M events/sec.', type: 'success' }
+          ] },
+          { cmd: 'neuralflow train --model transformer-pro --epochs 10', outputs: [
+            { text: 'Initializing neural fabric layers...', type: 'info' },
+            { text: 'Epoch 1/10 - loss: 0.142 - accuracy: 94.2%', type: 'info' },
+            { text: 'Epoch 5/10 - loss: 0.048 - accuracy: 97.9%', type: 'info' },
+            { text: 'Epoch 10/10 - loss: 0.015 - accuracy: 98.7%', type: 'success' },
+            { text: 'Model artifact saved to registry.', type: 'info' }
+          ] },
+          { cmd: 'neuralflow deploy --target cluster-us-east', outputs: [
+            { text: 'Checking cluster-us-east health status...', type: 'info' },
+            { text: 'Deploying model instance v2.4.12...', type: 'info' },
+            { text: 'Zero-downtime routing configured.', type: 'info' },
+            { text: 'Inference latency: <40ms. ALL SYSTEMS OPERATIONAL.', type: 'success' }
+          ] }
+        ];
+
+        let commandIndex = 0;
+
+        function clearTerminal() {
+          terminalBody.innerHTML = `
+            <div class="terminal-line">
+              <span class="terminal-prompt">neuralflow$</span>
+              <span class="terminal-command-container"></span><span class="terminal-cursor"></span>
+            </div>`;
+        }
+
+        function typeCommand() {
+          const item = terminalCommands[commandIndex];
+          const cmdText = item.cmd;
+          let charIdx = 0;
+          
+          const activeLine = terminalBody.querySelector('.terminal-line:last-child');
+          if (!activeLine) return;
+          const commandContainer = activeLine.querySelector('.terminal-command-container');
+          
+          const typingTimer = setInterval(() => {
+            if (charIdx < cmdText.length) {
+              commandContainer.textContent += cmdText[charIdx];
+              charIdx++;
+            } else {
+              clearInterval(typingTimer);
+              setTimeout(() => {
+                const cursor = activeLine.querySelector('.terminal-cursor');
+                if (cursor) cursor.remove();
+                showOutputs(item.outputs);
+              }, 400);
+            }
+          }, 50);
+        }
+
+        function showOutputs(outputs) {
+          let outputIdx = 0;
+          
+          function printNextOutput() {
+            if (outputIdx < outputs.length) {
+              const line = outputs[outputIdx];
+              const lineDiv = document.createElement('div');
+              lineDiv.className = 'terminal-line';
+              
+              const outputSpan = document.createElement('span');
+              outputSpan.className = `terminal-output ${line.type}`;
+              outputSpan.textContent = line.text;
+              
+              lineDiv.appendChild(outputSpan);
+              terminalBody.appendChild(lineDiv);
+              terminalBody.scrollTop = terminalBody.scrollHeight;
+              
+              outputIdx++;
+              setTimeout(printNextOutput, 350);
+            } else {
+              setTimeout(() => {
+                commandIndex = (commandIndex + 1) % terminalCommands.length;
+                clearTerminal();
+                setTimeout(typeCommand, 600);
+              }, 3000);
+            }
+          }
+          printNextOutput();
+        }
+
+        setTimeout(typeCommand, 1200);
+      }
+
+      /* ══════════════════════════════════════════════════
+         10. COMMAND PALETTE (WAAPI, Accessibility, Keyboard nav)
+      ══════════════════════════════════════════════════ */
+      const cmdPalette = document.getElementById('cmd-palette');
+      const cmdModal = document.getElementById('cmd-palette-modal');
+      const cmdInput = document.getElementById('cmd-palette-input');
+      const cmdResults = document.getElementById('cmd-palette-results');
+      const searchBtn = document.getElementById('search-btn');
+
+      const paletteItems = [
+        { label: 'Go to Features', action: () => scrollToSection('#features'), category: 'Navigation' },
+        { label: 'Go to Pricing', action: () => scrollToSection('#pricing'), category: 'Navigation' },
+        { label: 'Go to Customers', action: () => scrollToSection('#social-proof'), category: 'Navigation' },
+        { label: 'Go to FAQs', action: () => scrollToSection('#faq'), category: 'Navigation' },
+        { label: 'Toggle Billing Cycle', action: () => {
+          setBillingCycle(currentCycle === 'monthly' ? 'annual' : 'monthly');
+        }, category: 'Action' },
+        { label: 'Change Currency to INR', action: () => {
+          if (currencySelect) { currencySelect.value = 'INR'; currencySelect.dispatchEvent(new Event('change')); }
+        }, category: 'Action' },
+        { label: 'Change Currency to USD', action: () => {
+          if (currencySelect) { currencySelect.value = 'USD'; currencySelect.dispatchEvent(new Event('change')); }
+        }, category: 'Action' },
+        { label: 'Change Currency to EUR', action: () => {
+          if (currencySelect) { currencySelect.value = 'EUR'; currencySelect.dispatchEvent(new Event('change')); }
+        }, category: 'Action' },
+        { label: 'Copy Live API Key', action: () => {
+          navigator.clipboard.writeText('nf_live_a7f920bc8b2c451680a9b3d75c87');
+          alert('Demo API Key copied to clipboard!');
+        }, category: 'Developer' }
+      ];
+
+      let selectedIndex = 0;
+      let filteredItems = [...paletteItems];
+
+      function scrollToSection(selector) {
+        const el = document.querySelector(selector);
+        if (el) {
+          closePalette();
+          setTimeout(() => {
+            el.scrollIntoView({ behavior: 'smooth' });
+          }, 200);
+        }
+      }
+
+      function openPalette() {
+        cmdPalette.style.display = 'flex';
+        
+        // WAAPI animation: Fade in backdrop
+        cmdPalette.animate([
+          { opacity: 0 },
+          { opacity: 1 }
+        ], { duration: 175, easing: 'ease-out' });
+        
+        // WAAPI animation: Scale down & Fade in modal
+        cmdModal.animate([
+          { opacity: 0, transform: 'scale(0.95)' },
+          { opacity: 1, transform: 'scale(1)' }
+        ], { duration: 175, fill: 'forwards', easing: 'ease-out' });
+
+        cmdInput.value = '';
+        renderResults();
+        setTimeout(() => cmdInput.focus(), 50);
+      }
+
+      function closePalette() {
+        cmdPalette.animate([
+          { opacity: 1 },
+          { opacity: 0 }
+        ], { duration: 175, easing: 'ease-out' });
+
+        const modalAnim = cmdModal.animate([
+          { opacity: 1, transform: 'scale(1)' },
+          { opacity: 0, transform: 'scale(0.95)' }
+        ], { duration: 175, fill: 'forwards', easing: 'ease-out' });
+
+        modalAnim.onfinish = () => {
+          cmdPalette.style.display = 'none';
+        };
+      }
+
+      function renderResults() {
+        cmdResults.innerHTML = '';
+        if (filteredItems.length === 0) {
+          cmdResults.innerHTML = `<div class="cmd-palette-item" style="cursor:default;color:var(--text-muted);">No results found</div>`;
+          return;
+        }
+
+        filteredItems.forEach((item, idx) => {
+          const div = document.createElement('div');
+          div.className = `cmd-palette-item ${idx === selectedIndex ? 'selected' : ''}`;
+          div.setAttribute('role', 'option');
+          div.setAttribute('aria-selected', String(idx === selectedIndex));
+          
+          div.innerHTML = `
+            <div class="cmd-palette-item-left">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5l7.5 7.5l-7.5 7.5" />
+              </svg>
+              <span>${item.label}</span>
+            </div>
+            <span class="cmd-palette-kbd">${item.category}</span>
+          `;
+          
+          div.addEventListener('click', () => {
+            item.action();
+            closePalette();
+          });
+          
+          cmdResults.appendChild(div);
+        });
+
+        const selectedEl = cmdResults.querySelector('.cmd-palette-item.selected');
+        if (selectedEl) {
+          selectedEl.scrollIntoView({ block: 'nearest' });
+        }
+      }
+
+      searchBtn.addEventListener('click', openPalette);
+      cmdPalette.addEventListener('click', (e) => {
+        if (e.target === cmdPalette) closePalette();
+      });
+
+      cmdInput.addEventListener('input', (e) => {
+        const val = e.target.value.toLowerCase();
+        filteredItems = paletteItems.filter(item => 
+          item.label.toLowerCase().includes(val) || 
+          item.category.toLowerCase().includes(val)
+        );
+        selectedIndex = 0;
+        renderResults();
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+          e.preventDefault();
+          if (cmdPalette.style.display === 'flex') {
+            closePalette();
+          } else {
+            openPalette();
+          }
+        }
+
+        if (e.key === 'Escape' && cmdPalette.style.display === 'flex') {
+          closePalette();
+        }
+
+        if (cmdPalette.style.display === 'flex') {
+          if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            selectedIndex = (selectedIndex + 1) % filteredItems.length;
+            renderResults();
+          } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            selectedIndex = (selectedIndex - 1 + filteredItems.length) % filteredItems.length;
+            renderResults();
+          } else if (e.key === 'Enter') {
+            e.preventDefault();
+            if (filteredItems[selectedIndex]) {
+              filteredItems[selectedIndex].action();
+            }
+          }
+        }
+      });
+
+      /* ══════════════════════════════════════════════════
+         SCROLL TO TOP BUTTON, MOBILE NAV BACK GESTURE, AND DYNAMIC CHEVRONS
+      ══════════════════════════════════════════════════ */
+      // Scroll to Top logic
+      const scrollTopBtn = document.getElementById('scroll-to-top');
+      if (scrollTopBtn) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 400) {
+            scrollTopBtn.classList.add('visible');
+          } else {
+            scrollTopBtn.classList.remove('visible');
+          }
+        }, { passive: true });
+        
+        scrollTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // Mobile Nav back button and swipe-left gesture
+      const mobileNavBackBtn = document.getElementById('mobile-nav-back');
+      if (mobileNavBackBtn) {
+        mobileNavBackBtn.addEventListener('click', () => {
+          toggleMobileNav(false);
+        });
+      }
+
+      const mobileNavEl = document.getElementById('mobile-nav');
+      if (mobileNavEl) {
+        let touchStartX = 0;
+        let touchEndX = 0;
+        mobileNavEl.addEventListener('touchstart', (e) => {
+          touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        
+        mobileNavEl.addEventListener('touchend', (e) => {
+          touchEndX = e.changedTouches[0].screenX;
+          if (touchStartX - touchEndX > 50) { // Swiped left by at least 50px
+            toggleMobileNav(false);
+          }
+        }, { passive: true });
+      }
+
+      /* ══════════════════════════════════════════════════
+         11. COMPARISON FEATURE TABLE TOGGLE
+      ══════════════════════════════════════════════════ */
+      const compareBtn = document.getElementById('compare-table-btn');
+      const compareWrapper = document.getElementById('compare-table-wrapper');
+      const compareChevronPath = document.getElementById('compare-chevron-path');
+      if (compareBtn && compareWrapper) {
+        compareBtn.addEventListener('click', () => {
+          const isExpanded = compareBtn.getAttribute('aria-expanded') === 'true';
+          const nextExpanded = !isExpanded;
+          compareBtn.setAttribute('aria-expanded', String(nextExpanded));
+          compareWrapper.classList.toggle('expanded', nextExpanded);
+          
+          // Toggle SVG path between chevron-down and chevron-up
+          if (compareChevronPath) {
+            if (nextExpanded) {
+              compareChevronPath.setAttribute('d', 'm4.5 15.75l7.5-7.5l7.5 7.5');
+            } else {
+              compareChevronPath.setAttribute('d', 'm19.5 8.25l-7.5 7.5l-7.5-7.5');
+            }
+          }
+          
+          const svg = compareBtn.querySelector('svg');
+          if (svg) {
+            svg.style.transform = 'none';
+          }
+        });
+      }
+
+      /* ══════════════════════════════════════════════════
+         12. FAQ ACCORDIONS
+      ══════════════════════════════════════════════════ */
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const trigger = item.querySelector('.faq-trigger');
+        trigger.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+          faqItems.forEach(fi => {
+            fi.classList.remove('active');
+            fi.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+          });
+          if (!isActive) {
+            item.classList.add('active');
+            trigger.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+    })();
+  </script>
+
+  <!-- Scroll to Top Utility -->
+  <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.47 7.72a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 0 1-1.06-1.06l7.5-7.5Z"/>
+    </svg>
+  </button>
+
+</body>
+
+</html>
